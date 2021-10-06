@@ -17,3 +17,4 @@ Any web based software should be able to have access to the database. the databa
 Most databases would use current data to calculate and estimate the future numbers, but what we would like to do is to be able to analyze in detail how the numbers have escalated over the years to give a more accurate prediction.
 UN challenge - End Hunger, achieve food security and improved nutrition and promote sustained agriculture
 
+. ER Diagram
