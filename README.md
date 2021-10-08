@@ -16,7 +16,3 @@ The data we want to store in our database includes 2 sets of data. Firstly the w
 Any web based software should be able to have access to the database. the database will also give people research opportunities if they are interested in the topic. 
 Most databases would use current data to calculate and estimate the future numbers, but what we would like to do is to be able to analyze in detail how the numbers have escalated over the years to give a more accurate prediction.
 UN challenge - End Hunger, achieve food security and improved nutrition and promote sustained agriculture
-
-## ER Diagram
-
-![drawSQL-export-2021-10-05_22_45](https://user-images.githubusercontent.com/71522051/136137659-1c3974f8-16cb-4b92-8f5a-a68c9b633f79.png)
