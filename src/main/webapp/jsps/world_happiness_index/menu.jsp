@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for Hunger Index Worldwide </h1>
+    <h1>CRUD operations for World Happiness Index </h1>
     <br>
-	<a href="<c:url value='/jsps/world_happiness_index/world_happiness_index_create.jsp'/>" target="_parent">Create industry</a> |&nbsp; 
-	<a href="<c:url value='/jsps/world_happiness_index/world_happiness_index_read.jsp'/>" target="_parent">Read industry</a> |&nbsp;
-	<a href="<c:url value='/jsps/world_happiness_index/world_happiness_index_update.jsp'/>" target="_parent">Update industry</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/world_happiness_index/world_happiness_index_delete.jsp'/>" target="_parent">Delete industry</a>	
+	<a href="<c:url value='/jsps/world_happiness_index/world_happiness_index_create.jsp'/>" target="_parent">Create</a> |&nbsp; 
+	<a href="<c:url value='/jsps/world_happiness_index/world_happiness_index_read.jsp'/>" target="_parent">Read</a> |&nbsp;
+	<a href="<c:url value='/jsps/world_happiness_index/world_happiness_index_update.jsp'/>" target="_parent">Update</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/world_happiness_index/world_happiness_index_delete.jsp'/>" target="_parent">Delete</a>	
 	    
   </body>
 </html>
