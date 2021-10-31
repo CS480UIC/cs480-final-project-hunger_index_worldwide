@@ -37,10 +37,14 @@
 		<c:when test="${empty sessionScope.session_user }">
 			<a href="<c:url value='/jsps/user/login.jsp'/>" target="_parent">Login</a> |&nbsp; 
 			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">Register</a> |&nbsp; 
+			<a href="<c:url value='/jsps/login_user/menu.jsp'/>" target="body">World Death Rate</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/world_body_fat_percentage/menu.jsp'/>" target="body">World Body Fat Percentage</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/world_death_rate/menu.jsp'/>" target="body">World Death Rate</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/world_happiness_index/menu.jsp'/>" target="body">World Happiness Index</a> |&nbsp;&nbsp;
-	
+			<a href="<c:url value='/jsps/world_income_avg/menu.jsp'/>" target="body">World Body Fat Percentage</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/world_unemployement_rate/menu.jsp'/>" target="body">World Death Rate</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/world_hunger_statistics/menu.jsp'/>" target="body">World Death Rate</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/world_vaccination_info/menu.jsp'/>" target="body">World Happiness Index</a> |&nbsp;&nbsp;
 		</c:when>
 		<c:otherwise>
 			Hello：${sessionScope.session_user.username };
