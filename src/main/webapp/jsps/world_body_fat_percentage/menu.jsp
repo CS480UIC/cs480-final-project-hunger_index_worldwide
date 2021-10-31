@@ -22,12 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for Hunger Index Worldwide </h1>
+    <h1>CRUD operations for Body Fat Percentage </h1>
     <br>
-	<a href="<c:url value='/jsps/world_body_fat_percentage/world_body_fat_percentage_create.jsp'/>" target="_parent">Create industry</a> |&nbsp; 
-	<a href="<c:url value='/jsps/world_body_fat_percentage/world_body_fat_percentage_read.jsp'/>" target="_parent">Read industry</a> |&nbsp;
-	<a href="<c:url value='/jsps/world_body_fat_percentage/world_body_fat_percentage_update.jsp'/>" target="_parent">Update industry</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/world_body_fat_percentage/world_body_fat_percentage_delete.jsp'/>" target="_parent">Delete industry</a>	
+	<a href="<c:url value='/jsps/world_body_fat_percentage/world_body_fat_percentage_create.jsp'/>" target="_parent">Create</a> |&nbsp; 
+	<a href="<c:url value='/jsps/world_body_fat_percentage/world_body_fat_percentage_read.jsp'/>" target="_parent">Read</a> |&nbsp;
+	<a href="<c:url value='/jsps/world_body_fat_percentage/world_body_fat_percentage_update.jsp'/>" target="_parent">Updatey</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/world_body_fat_percentage/world_body_fat_percentage_delete.jsp'/>" target="_parent">Delete</a>	
 	    
   </body>
 </html>
