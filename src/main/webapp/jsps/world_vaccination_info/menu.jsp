@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD world_vaccination_info </h1>
     <br>
-	<a href="<c:url value='/jsps/world_vaccination_info/world_vaccination_infocreate.jsp'/>" target="_parent">Create login_user</a> |&nbsp; 
-	<a href="<c:url value='/jsps/world_vaccination_info/world_vaccination_inforead.jsp'/>" target="_parent">Read login_user</a> |&nbsp;
-	<a href="<c:url value='/jsps/world_vaccination_info/world_vaccination_infoupdate.jsp'/>" target="_parent">Update login_user</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/world_vaccination_info/world_vaccination_infodelete.jsp'/>" target="_parent">Delete login_user</a>	
+	<a href="<c:url value='/jsps/world_vaccination_info/world_vaccination_infocreate.jsp'/>" target="_parent">Create world_vaccination_info</a> |&nbsp; 
+	<a href="<c:url value='/jsps/world_vaccination_info/world_vaccination_inforead.jsp'/>" target="_parent">Read world_vaccination_info</a> |&nbsp;
+	<a href="<c:url value='/jsps/world_vaccination_info/world_vaccination_infoupdate.jsp'/>" target="_parent">Update world_vaccination_info</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/world_vaccination_info/world_vaccination_infodelete.jsp'/>" target="_parent">Delete world_vaccination_info</a>	
 	    
   </body>
 </html>

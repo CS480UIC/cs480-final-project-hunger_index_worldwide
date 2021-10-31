@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD world_income_avg </h1>
     <br>
-	<a href="<c:url value='/jsps/world_income_avg/world_income_avgcreate.jsp'/>" target="_parent">Create login_user</a> |&nbsp; 
-	<a href="<c:url value='/jsps/world_income_avg/world_income_avgread.jsp'/>" target="_parent">Read login_user</a> |&nbsp;
-	<a href="<c:url value='/jsps/world_income_avg/world_income_avgupdate.jsp'/>" target="_parent">Update login_user</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/world_income_avg/world_income_avgdelete.jsp'/>" target="_parent">Delete login_user</a>	
+	<a href="<c:url value='/jsps/world_income_avg/world_income_avgcreate.jsp'/>" target="_parent">Create world_income_avg</a> |&nbsp; 
+	<a href="<c:url value='/jsps/world_income_avg/world_income_avgread.jsp'/>" target="_parent">Read world_income_avg</a> |&nbsp;
+	<a href="<c:url value='/jsps/world_income_avg/world_income_avgupdate.jsp'/>" target="_parent">Update world_income_avg</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/world_income_avg/world_income_avgdelete.jsp'/>" target="_parent">Delete world_income_avg</a>	
 	    
   </body>
 </html>
