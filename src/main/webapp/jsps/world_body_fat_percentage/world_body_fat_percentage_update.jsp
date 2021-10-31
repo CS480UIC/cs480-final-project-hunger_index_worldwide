@@ -27,7 +27,7 @@
 	Update Entry   :<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	<input type="submit" value="Update Entry"/>
+	<input type="submit" value="Update Entry "/>
 </form>
   </body>
 </html>
