@@ -24,10 +24,10 @@
   <body>
     <h1>CRUD World Unemployement Rate </h1>
     <br>
-	<a href="<c:url value='/jsps/world_unemployement_rate/world_unemployement_rate_create.jsp'/>" target="_parent">Create login_user</a> |&nbsp; 
-	<a href="<c:url value='/world_unemployement_rate/world_unemployement_rate_read.jsp'/>" target="_parent">Read login_user</a> |&nbsp;
-	<a href="<c:url value='/jsps/world_unemployement_rate/world_unemployement_rate_update.jsp'/>" target="_parent">Update login_user</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/world_unemployement_rate/world_unemployement_rate_delete.jsp'/>" target="_parent">Delete login_user</a>	
+	<a href="<c:url value='/jsps/world_unemployement_rate/world_unemployement_rate_create.jsp'/>" target="_parent">Create </a> |&nbsp; 
+	<a href="<c:url value='/world_unemployement_rate/world_unemployement_rate_read.jsp'/>" target="_parent">Read </a> |&nbsp;
+	<a href="<c:url value='/jsps/world_unemployement_rate/world_unemployement_rate_update.jsp'/>" target="_parent">Update </a> |&nbsp;	 
+	<a href="<c:url value='/jsps/world_unemployement_rate/world_unemployement_rate_delete.jsp'/>" target="_parent">Delete </a>	
 	    
   </body>
 </html>
