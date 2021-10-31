@@ -27,7 +27,7 @@
 	Delete Entry   :<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	<input type="submit" value="Delete Entry"/>
+	<input type="submit" value="Delete Entry "/>
 </form>
   </body>
 </html>
