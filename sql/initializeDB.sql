@@ -7,17 +7,17 @@ drop table if exists world_hunger_statistics;
 create table world_hunger_statistics (
 user_id INT PRIMARY KEY,
 avg_income INT NOT NULL,
-vaccination_rate INT NOT NULL,
-death_rate INT NOT NULL,
-happiness_index INT NOT NULL,
-unemplyment_rate INT NOT NULL,
-body_fate_percentage INT NOT NULL
+vaccination_rate FLOAT NOT NULL,
+death_rate FLOAT NOT NULL,
+happiness_index FLOAT NOT NULL,
+unemplyment_rate FLOAT NOT NULL,
+body_fate_percentage FLOAT NOT NULL
 );
 
 
 drop table if exists world_body_fat_percentage;
 create table world_body_fat_percentage (
-body_fate_percentage INT PRIMARY KEY,
+body_fate_percentage FLOAT PRIMARY KEY,
 country VARCHAR(30) NOT NULL,
 continent VARCHAR(30) NOT NULL
 );
@@ -26,7 +26,7 @@ continent VARCHAR(30) NOT NULL
 drop table if exists world_death_rate;
 
 create table world_death_rate (
-death_rate INT PRIMARY KEY,
+death_rate FLOAT PRIMARY KEY,
 country VARCHAR(30) NOT NULL,
 continent VARCHAR(30) NOT NULL
 
@@ -37,7 +37,7 @@ continent VARCHAR(30) NOT NULL
 drop table if exists world_happiness_index;
 
 create table world_happiness_index (
-happiness_index INT PRIMARY KEY,
+happiness_index FLOAT PRIMARY KEY,
 country VARCHAR(30) NOT NULL,
 continent VARCHAR(30) NOT NULL
 );
@@ -61,7 +61,7 @@ continent VARCHAR(30) NOT NULL
 drop table if exists world_unemployment_rate;
 
 create table world_unemployment_rate(
-unemplyment_rate INT PRIMARY KEY,
+unemplyment_rate FLOAT PRIMARY KEY,
 country VARCHAR(30) NOT NULL,
 continent VARCHAR(30) NOT NULL
 );
@@ -69,7 +69,7 @@ continent VARCHAR(30) NOT NULL
 drop table if exists world_vaccination_rate;
 
 create table world_vaccination_rate(
-vaccination_rate INT PRIMARY KEY,
+vaccination_rate FLOAT PRIMARY KEY,
 country VARCHAR(30) NOT NULL,
 continent VARCHAR(30) NOT NULL
 );
