@@ -1,4 +1,4 @@
-create database hunger_index_worldwide ;
+create database if not exists hunger_index_worldwide ;
 use hunger_index_worldwide; 
 
 
