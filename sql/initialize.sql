@@ -11,7 +11,7 @@ vaccination_rate INT NOT NULL,
 death_rate INT NOT NULL,
 happiness_index INT NOT NULL,
 unemplyment_rate INT NOT NULL,
-body_fate_percentage INT NOT NULL,
+body_fate_percentage INT NOT NULL
 );
 
 
