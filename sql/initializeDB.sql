@@ -47,12 +47,7 @@ continent VARCHAR(30) NOT NULL
 drop table if exists login_user;
  create table login_user(
   user_id INT primary key,
-<<<<<<< HEAD:sql/initializeDB.sql
-  user_name VARCHAR(50) ,
-  FOREIGN KEY (user_id) REFERENCES world_hunger_statistics(user_id) on update cascade on delete cascade
-=======
   `user_name` VARCHAR(50)
->>>>>>> eb059145670bd523805bc1a01c601d720af8f559:sql/initialize.sql
   );
 
 drop table if exists world_income_index;
