@@ -50,7 +50,8 @@ FOREIGN KEY (happiness_index) REFERENCES world_hunger_statistics(happiness_index
 drop table if exists login_user;
  create table login_user(
   user_id INT primary key,
-  `user_name` VARCHAR(50) ,
+  user_name VARCHAR(50) ,
+  FOREIGN KEY (user_id) REFERENCES world_hunger_statistics(user_id) on update cascade on delete cascade
   );
 
 drop table if exists world_income_index;
