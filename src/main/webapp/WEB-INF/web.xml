@@ -71,6 +71,30 @@
     <url-pattern>/WorldBodyFatPercentageServletCreate</url-pattern>
   </servlet-mapping>
   
+  
+   <servlet>
+    <description></description>
+    <display-name>WorldBodyFatPercentageServletUpdate</display-name>
+    <servlet-name>WorldBodyFatPercentageServletUpdate</servlet-name>
+    <servlet-class>world_body_fat_percentage.web.servlet.WorldBodyFatPercentageServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldBodyFatPercentageServletUpdate</servlet-name>
+    <url-pattern>/WorldBodyFatPercentageServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WorldBodyFatPercentageServletDelete</display-name>
+    <servlet-name>WorldBodyFatPercentageServletDelete</servlet-name>
+    <servlet-class>world_body_fat_percentage.web.servlet.WorldBodyFatPercentageServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldBodyFatPercentageServletDelete</servlet-name>
+    <url-pattern>/WorldBodyFatPercentageServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <description></description>
     <display-name>WorldDeathRateServletCreate</display-name>
@@ -84,6 +108,29 @@
   
   <servlet>
     <description></description>
+    <display-name>WorldDeathRateServletUpdate</display-name>
+    <servlet-name>WorldDeathRateServletUpdate</servlet-name>
+    <servlet-class>world_death_rate.web.servlet.WorldDeathRateServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldDeathRateServletUpdate</servlet-name>
+    <url-pattern>/WorldDeathRateServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WorldDeathRateServletDelete</display-name>
+    <servlet-name>WorldDeathRateServletDelete</servlet-name>
+    <servlet-class>world_death_rate.web.servlet.WorldDeathRateServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldDeathRateServletDelete</servlet-name>
+    <url-pattern>/WorldDeathRateServletDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
     <display-name>WorldUnemployementRateServletCreate</display-name>
     <servlet-name>WorldUnemployementRateServletCreate</servlet-name>
     <servlet-class>world_unemployement_rate.web.servlet.WorldUnemployementRateServletCreate</servlet-class>
@@ -93,6 +140,16 @@
     <url-pattern>/WorldUnemployementRateServletCreate</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>WorldUnemployementRateServletUpdate</display-name>
+    <servlet-name>WorldUnemployementRateServletUpdate</servlet-name>
+    <servlet-class>world_unemployement_rate.web.servlet.WorldUnemployementRateServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldUnemployementRateServletUpdate</servlet-name>
+    <url-pattern>/WorldUnemployementRateServletUpdate</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <description></description>

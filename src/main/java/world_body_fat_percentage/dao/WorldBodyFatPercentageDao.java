@@ -72,43 +72,43 @@ public class WorldBodyFatPercentageDao {
 	}
 	
 	
-//	public void update(WorldBodyFatPercentage form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-//		System.out.println("Now going to update");
-//		System.out.println(form);
-//
-//		try {
-//			Class.forName("com.mysql.cj.jdbc.Driver");
-//			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore","test", "12345678");
-//			
-//			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
-//			System.out.println("Update Executed");
-//			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-//			preparestatement.setInt(1,form.getBody_fat_percentage());
-//		    preparestatement.setString(2,form.getCountry());
-//		    preparestatement.setString(3,form.getContinent());
-//		    preparestatement.executeUpdate();
-//		    connect.close();
-//		} catch(SQLException e) {
-//			throw new RuntimeException(e);
-//		}
-//	}
+	public void update(WorldBodyFatPercentage form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		System.out.println("Now going to update");
+		System.out.println(form);
+
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			
+			String sql = "UPDATE world_body_fat_percentage SET body_fat_percentage = ?, continent = ? where country = ?;";
+			System.out.println("Update Executed");
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			preparestatement.setFloat(1,form.getBody_fat_percentage());
+		    preparestatement.setString(3,form.getContinent());
+		    preparestatement.setString(2,form.getCountry());
+		    preparestatement.executeUpdate();
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
 //	
-//	
-//	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-//		System.out.println("Now going to delete");
-//		try {
-//			Class.forName("com.mysql.cj.jdbc.Driver");
-//			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore","test", "12345678");
-//			
-//			String sql = "delete from entity1 where username = ?";
-//			System.out.println(username);
-//			System.out.println("Delete Executed");
-//			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-//		    preparestatement.setString(1,username);
-//		    preparestatement.executeUpdate();
-//		    connect.close();
-//		} catch(SQLException e) {
-//			throw new RuntimeException(e);
-//		}
-//	}
+	public void delete(String cnt) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		System.out.println("Now going to delete");
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			
+			String sql = "delete from world_body_fat_percentage where country = ?";
+			System.out.println(cnt);
+			System.out.println("Delete Executed");
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    preparestatement.setString(1,cnt);
+		    preparestatement.executeUpdate();
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
 }

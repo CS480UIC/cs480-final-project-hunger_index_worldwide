@@ -22,12 +22,18 @@
   
   <body>
   <h1>Update World Body Fat Percentage</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update Entry   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/WorldBodyFatPercentageServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="update"/>
+	body_fat_percentage    :<input type="text" name="Body fat percentage" value="${form.body_fat_percentage }"/>
+	<span style="color: red; font-weight: 900">${errors.body_fat_percentage }</span> <br />
+	
+	country    :<input type="text" name="Country" value="${form.country }"/>
+	<span style="color: red; font-weight: 900">${errors.country }</span> <br />
+	
+	continent    :<input type="text" name="Continent" value="${form.continent }"/>
+	<span style="color: red; font-weight: 900">${errors.continent }</span> <br />
 	<br/>
-	<input type="submit" value="Update Entry "/>
+	<input type="submit" value="update"/>
 </form>
   </body>
 </html>

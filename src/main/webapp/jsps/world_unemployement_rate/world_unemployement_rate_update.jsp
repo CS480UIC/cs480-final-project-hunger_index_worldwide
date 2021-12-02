@@ -22,11 +22,16 @@
   
   <body>
   <h1>World Unemployement Rate Update</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
+<form action="<c:url value='/WorldUnemployementRateServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="update"/>
+	world_unemployement_rate    :<input type="text" name="Unemployement Rate" value="${form.unemployement_rate }"/>
+	<span style="color: red; font-weight: 900">${errors.unemployement_rate }</span> <br />
+	
+	country    :<input type="text" name="Country" value="${form.country }"/>
+	<span style="color: red; font-weight: 900">${errors.country }</span> <br />
+	
+	continent    :<input type="text" name="Continent" value="${form.continent }"/>
+	<span style="color: red; font-weight: 900">${errors.continent }</span> <br />
 	<input type="submit" value="Update Entry"/>
 </form>
   </body>

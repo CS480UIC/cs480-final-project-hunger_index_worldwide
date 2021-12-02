@@ -44,48 +44,48 @@ public class WorldBodyFatPercentageServletDelete extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		String method = request.getParameter("method");
-//		WorldBodyFatPercentageDao entity1dao = new WorldBodyFatPercentageDao();
-//		WorldBodyFatPercentage entity1 = null;
-//		if(method.equals("search"))
-//		{
-//			try {
-////				entity1dao to Entity1Dao
-//				entity1 = WorldBodyFatPercentageDao.findBybody_fat_percentage(request.getParameter("username"));
-//			} catch (ClassNotFoundException e1) {
-//				e1.printStackTrace();
-//			} catch (InstantiationException e1) {
-//				e1.printStackTrace();
-//			} catch (IllegalAccessException e1) {
-//				e1.printStackTrace();
-//			}
-//		
-////			Entity1Service entity1service = new Entity1Service();		
-//			if(entity1.getUsername()!=null){
-//						System.out.println(entity1);
-//						request.setAttribute("entity1", entity1);
-//						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);
-//					
-//				}
-//				else{
-//				request.setAttribute("msg", "Entity not found");
-//				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//			}
-//		}
-//		else if(method.equals("delete"))
-//		{	
-//			try {
-//				entity1dao.delete(request.getParameter("username"));
-//			} catch (ClassNotFoundException e1) {
-//				e1.printStackTrace();
-//			} catch (InstantiationException e1) {
-//				e1.printStackTrace();
-//			} catch (IllegalAccessException e1) {
-//				e1.printStackTrace();
-//			}
-//			request.setAttribute("msg", "Entity Deleted");
-//			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//		}
+		String method = request.getParameter("method");
+		WorldBodyFatPercentageDao entity1dao = new WorldBodyFatPercentageDao();
+		WorldBodyFatPercentage entity1 = null;
+		if(method.equals("search"))
+		{
+			try {
+//				entity1dao to Entity1Dao
+				entity1 = WorldBodyFatPercentageDao.findBybody_fat_percentage(request.getParameter("country"));
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			} catch (InstantiationException e1) {
+				e1.printStackTrace();
+			} catch (IllegalAccessException e1) {
+				e1.printStackTrace();
+			}
+		
+//			Entity1Service entity1service = new Entity1Service();		
+			if(entity1.getCountry()!=null){
+						System.out.println(entity1);
+						request.setAttribute("world_body_fat_percentage", entity1);
+						request.getRequestDispatcher("/jsps/entity1/entity1_delete_output.jsp").forward(request, response);
+					
+				}
+				else{
+				request.setAttribute("msg", "Entity not found");
+				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			}
+		}
+		else if(method.equals("delete"))
+		{	
+			try {
+				entity1dao.delete(request.getParameter("country"));
+			} catch (ClassNotFoundException e1) {
+				e1.printStackTrace();
+			} catch (InstantiationException e1) {
+				e1.printStackTrace();
+			} catch (IllegalAccessException e1) {
+				e1.printStackTrace();
+			}
+			request.setAttribute("msg", "Entity Deleted");
+			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+		}
 	}
 }
 
