@@ -82,6 +82,17 @@
     <url-pattern>/WorldDeathRateServletCreate</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>WorldUnemployementRateServletCreate</display-name>
+    <servlet-name>WorldUnemployementRateServletCreate</servlet-name>
+    <servlet-class>world_unemployement_rate.web.servlet.WorldUnemployementRateServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldUnemployementRateServletCreate</servlet-name>
+    <url-pattern>/WorldUnemployementRateServletCreate</url-pattern>
+  </servlet-mapping>
+  
   
   <servlet>
     <description></description>
