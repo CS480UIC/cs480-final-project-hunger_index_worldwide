@@ -37,28 +37,13 @@
 		<c:when test="${empty sessionScope.session_user }">
 			<a href="<c:url value='/jsps/user/login.jsp'/>" target="_parent">Login</a> |&nbsp; 
 			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">Register</a> |&nbsp; 
-<<<<<<< HEAD
 			<%-- <a href="<c:url value='/jsps/login_user/menu.jsp'/>" target="body">Login User</a> |&nbsp;&nbsp;--%>
 			
-=======
-		<%-- <a href="<c:url value='/jsps/login_user/menu.jsp'/>" target="body">Login User</a> |&nbsp;&nbsp; --%>
-			<a href="<c:url value='/jsps/world_body_fat_percentage/menu.jsp'/>" target="body">World Body Fat Percentage</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/world_death_rate/menu.jsp'/>" target="body">World Death Rate</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/world_happiness_index/menu.jsp'/>" target="body">World Happiness Index</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/world_income_avg/menu.jsp'/>" target="body">World Income Average</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/world_unemployement_rate/menu.jsp'/>" target="body">World Unemployement Rate</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/world_hunger_statistics/menu.jsp'/>" target="body">World Hunger Statistics</a> |&nbsp;&nbsp;
-			<a href="<c:url value='/jsps/world_vaccination_info/menu.jsp'/>" target="body">World Vaccination Info</a> |&nbsp;&nbsp;
->>>>>>> branch 'main' of https://github.com/CS480UIC/cs480-final-project-hunger_index_worldwide.git
 		</c:when>
 		<c:otherwise>
 			Hello：${sessionScope.session_user.username };
 			<a href="<c:url value='/jsps/item.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
-			<a href="<c:url value='/jsps/entity1/entity1create.jsp'/>" target="_parent">Create Entity1</a> |&nbsp; 
-			<a href="<c:url value='/jsps/entity1/entity1read.jsp'/>" target="_parent">Read Entity1</a> |&nbsp;
-			<a href="<c:url value='/jsps/entity1/entity1update.jsp'/>" target="_parent">Update Entity1</a> |&nbsp;	 
-			<a href="<c:url value='/jsps/entity1/entity1delete.jsp'/>" target="_parent">Delete Entity1</a> |&nbsp;
 			<a href="<c:url value='/jsps/world_body_fat_percentage/menu.jsp'/>" target="body">World Body Fat Percentage</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/world_death_rate/menu.jsp'/>" target="body">World Death Rate</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/world_happiness_index/menu.jsp'/>" target="body">World Happiness Index</a> |&nbsp;&nbsp;
