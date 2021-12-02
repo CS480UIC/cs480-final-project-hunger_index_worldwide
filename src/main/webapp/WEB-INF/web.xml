@@ -15,6 +15,28 @@
   
   <servlet>
     <description></description>
+    <display-name>WorldHappinessIndexServletCreate</display-name>
+    <servlet-name>WorldHappinessIndexServletCreate</servlet-name>
+    <servlet-class>world_happiness_index.web.servlet.WorldHappinessIndexServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldHappinessIndexServletCreate</servlet-name>
+    <url-pattern>/WorldHappinessIndexServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WorldIncomeIndexServletCreate</display-name>
+    <servlet-name>WorldIncomeIndexServletCreate</servlet-name>
+    <servlet-class>world_income_index.web.servlet.WorldIncomeIndexServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldIncomeIndexServletCreate</servlet-name>
+    <url-pattern>/WorldIncomeIndexServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>Entity1ServletRead</display-name>
     <servlet-name>Entity1ServletRead</servlet-name>
     <servlet-class>entity1.web.servlet.Entity1ServletRead</servlet-class>

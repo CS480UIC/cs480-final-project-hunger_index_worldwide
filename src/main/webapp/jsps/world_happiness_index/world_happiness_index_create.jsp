@@ -22,9 +22,13 @@
   
   <body>
   <h1>World Happiness Index Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	New Entry    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/WorldHappinessIndexServletCreate'/>" method="post">
+	Happiness Index  :<input type="text" name="Happiness Index"  value="${form.happiness_index }"/>
+	<span style="color: red; font-weight: 900">${errors.happiness_index }</span> <br />
+	Country   :<input type="text" name="Country" value="${form.country }"/>
+	<span style="color: red; font-weight: 900">${errors.country }</span> <br />
+	Continent    :<input type="text" name="Continent" value="${form.continent }"/>
+	<span style="color: red; font-weight: 900">${errors.continent }</span> <br />
 	
 	<input type="submit" value="Create Entry"/>
 </form>

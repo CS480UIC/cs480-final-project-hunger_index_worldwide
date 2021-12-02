@@ -11,20 +11,20 @@ public class WorldHappinessIndex {
 	 * Correspond to the user table
 	 */
 	
-	private Integer avg_income;
+	private Float happiness_index;
 	private String country; 
 	private String continent;
 	/**
-	 * @return the avg_income
+	 * @return the happiness_index
 	 */
-	public Integer getAvg_income() {
-		return avg_income;
+	public Float getHappiness_index() {
+		return happiness_index;
 	}
 	/**
-	 * @param avg_income the avg_income to set
+	 * @param happiness_index the happiness_index to set
 	 */
-	public void setAvg_income(Integer avg_income) {
-		this.avg_income = avg_income;
+	public void setHappiness_index(Float happiness_index) {
+		this.happiness_index = happiness_index;
 	}
 	/**
 	 * @return the country
@@ -50,6 +50,6 @@ public class WorldHappinessIndex {
 	public void setContinent(String continent) {
 		this.continent = continent;
 	}
-
+	
 
 }

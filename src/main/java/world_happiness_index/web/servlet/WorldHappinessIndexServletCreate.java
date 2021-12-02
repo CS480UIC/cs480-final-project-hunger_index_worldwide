@@ -58,7 +58,7 @@ public class WorldHappinessIndexServletCreate extends HttpServlet {
 //		System.out.println("1");
 //		System.out.println(info);
 
-		form.setAvg_income(Integer.parseInt(info.get(1)));
+		form.setHappiness_index(Float.parseFloat(info.get(1)));
 //		System.out.println("1");
 
 		form.setCountry(info.get(2));

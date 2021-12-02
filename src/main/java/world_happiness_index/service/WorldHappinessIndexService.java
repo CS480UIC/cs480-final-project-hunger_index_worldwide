@@ -23,7 +23,7 @@ public class WorldHappinessIndexService {
 		
 		// check the primary key of Entity1
 		WorldHappinessIndex entity1 = WorldHappinessIndexDao.findByCountry(form.getCountry());
-		if(entity1.getCountry()!=null && entity1.getCountry().equals(form.getCountry())) throw new WorldHappinessIndexException("This country's average income has been registered!");
+		if(entity1.getCountry()!=null && entity1.getCountry().equals(form.getCountry())) throw new WorldHappinessIndexException("This country's happiness index has been registered!");
 		entity1Dao.add(form);
 	}
 
