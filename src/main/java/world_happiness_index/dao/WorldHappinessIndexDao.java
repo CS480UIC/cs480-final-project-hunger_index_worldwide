@@ -7,15 +7,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-import world_happiness_index.domain.WorldIncomeIndex;
+import world_happiness_index.domain.WorldHappinessIndex;
 
 /**
  * DDL functions performed in database
  */
-public class WorldIncomeIndexDao {
+public class WorldHappinessIndexDao {
 
-	public static WorldIncomeIndex findByCountry(String countryName) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		WorldIncomeIndex entity1 = new WorldIncomeIndex();
+	public static WorldHappinessIndex findByCountry(String countryName) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		WorldHappinessIndex entity1 = new WorldHappinessIndex();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
@@ -47,7 +47,7 @@ public class WorldIncomeIndexDao {
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(WorldIncomeIndex form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(WorldHappinessIndex form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("We are here");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");

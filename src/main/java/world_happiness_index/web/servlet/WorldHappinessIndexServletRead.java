@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import world_happiness_index.dao.WorldIncomeIndexDao;
-import world_happiness_index.domain.WorldIncomeIndex;
+import world_happiness_index.dao.WorldHappinessIndexDao;
+import world_happiness_index.domain.WorldHappinessIndex;
 //import entity1.service.Entity1Service;
 
 
@@ -17,13 +17,13 @@ import world_happiness_index.domain.WorldIncomeIndex;
  * Servlet implementation class UserServlet
  */
 
-public class WorldIncomeIndexServletRead extends HttpServlet {
+public class WorldHappinessIndexServletRead extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public WorldIncomeIndexServletRead() {
+    public WorldHappinessIndexServletRead() {
         super();
         // TODO Auto-generated constructor stub
     }

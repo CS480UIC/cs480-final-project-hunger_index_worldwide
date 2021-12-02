@@ -6,7 +6,7 @@ package world_happiness_index.domain;
  * @author Akash Sunda
  * 
  */
-public class WorldIncomeIndex {
+public class WorldHappinessIndex {
 	/*
 	 * Correspond to the user table
 	 */

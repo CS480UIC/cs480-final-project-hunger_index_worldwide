@@ -11,22 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import world_happiness_index.domain.WorldIncomeIndex;
-import world_happiness_index.service.WorldIncomeIndexException;
-import world_happiness_index.service.WorldIncomeIndexService;
+import world_happiness_index.domain.WorldHappinessIndex;
+import world_happiness_index.service.WorldHappinessIndexException;
+import world_happiness_index.service.WorldHappinessIndexService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class WorldIncomeIndexServletCreate extends HttpServlet {
+public class WorldHappinessIndexServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public WorldIncomeIndexServletCreate() {
+    public WorldHappinessIndexServletCreate() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -42,9 +42,9 @@ public class WorldIncomeIndexServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		WorldIncomeIndexService entity1service = new WorldIncomeIndexService();
+		WorldHappinessIndexService entity1service = new WorldHappinessIndexService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		WorldIncomeIndex form = new WorldIncomeIndex();
+		WorldHappinessIndex form = new WorldHappinessIndex();
 		List<String> info = new ArrayList<String>();
 		System.out.println(form);
 		for(String name : paramMap.keySet()) {
@@ -73,7 +73,7 @@ public class WorldIncomeIndexServletCreate extends HttpServlet {
 			entity1service.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | WorldIncomeIndexException e) {
+		} catch (ClassNotFoundException | WorldHappinessIndexException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InstantiationException e) {
