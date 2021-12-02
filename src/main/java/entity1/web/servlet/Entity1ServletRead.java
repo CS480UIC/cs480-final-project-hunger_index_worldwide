@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
+import entity1.dao.WorldDeathRateDao;
+import entity1.domain.WorldDeathRate;
 //import entity1.service.Entity1Service;
 
 
@@ -39,9 +39,9 @@ public class Entity1ServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1 entity1 = null;
+		WorldDeathRate entity1 = null;
 		try {
-			entity1 = Entity1Dao.findByUsername(request.getParameter("username"));
+			entity1 = WorldDeathRateDao.findByUsername(request.getParameter("username"));
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {

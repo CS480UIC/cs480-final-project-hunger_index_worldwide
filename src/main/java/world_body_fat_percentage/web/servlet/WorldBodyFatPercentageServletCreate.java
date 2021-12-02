@@ -1,4 +1,4 @@
-package entity1.web.servlet;
+package world_body_fat_percentage.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,22 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.domain.WorldDeathRate;
-import entity1.service.Entity1Exception;
-import entity1.service.Entity1Service;
+import world_body_fat_percentage.domain.WorldBodyFatPercentage;
+import world_body_fat_percentage.service.WorldBodyFatPercentageException;
+import world_body_fat_percentage.service.WorldBodyFatPercentageService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletCreate extends HttpServlet {
+public class WorldBodyFatPercentageServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletCreate() {
+    public WorldBodyFatPercentageServletCreate() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -42,9 +42,9 @@ public class Entity1ServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1Service entity1service = new Entity1Service();
+		WorldBodyFatPercentageService entity1service = new WorldBodyFatPercentageService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		WorldDeathRate form = new WorldDeathRate();
+		WorldBodyFatPercentage form = new WorldBodyFatPercentage();
 		List<String> info = new ArrayList<String>();
 		System.out.println(form);
 		for(String name : paramMap.keySet()) {
@@ -58,13 +58,13 @@ public class Entity1ServletCreate extends HttpServlet {
 //		System.out.println("1");
 //		System.out.println(info);
 
-		form.setUsername(info.get(1));
+		form.setBody_fat_percentage(Float.parseFloat(info.get(1)));
 //		System.out.println("1");
 
-		form.setPassword(info.get(2));
+		form.setCountry(info.get(2));
 //		System.out.println("2");
 
-		form.setEmail(info.get(3));		
+		form.setContinent(info.get(3));		
 //		System.out.println("3");
 		
 		
@@ -73,7 +73,7 @@ public class Entity1ServletCreate extends HttpServlet {
 			entity1service.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | Entity1Exception e) {
+		} catch (ClassNotFoundException | WorldBodyFatPercentageException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InstantiationException e) {

@@ -51,6 +51,40 @@
   
   <servlet>
     <description></description>
+    <display-name>WorldVaccinationInfoServletCreate</display-name>
+    <servlet-name>WorldVaccinationInfoServletCreate</servlet-name>
+    <servlet-class>world_vaccination_info.web.servlet.WorldVaccinationInfoServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldVaccinationInfoServletCreate</servlet-name>
+    <url-pattern>/WorldVaccinationInfoServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WorldBodyFatPercentageServletCreate</display-name>
+    <servlet-name>WorldBodyFatPercentageServletCreate</servlet-name>
+    <servlet-class>world_body_fat_percentage.web.servlet.WorldBodyFatPercentageServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldBodyFatPercentageServletCreate</servlet-name>
+    <url-pattern>/WorldBodyFatPercentageServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WorldDeathRateServletCreate</display-name>
+    <servlet-name>WorldDeathRateServletCreate</servlet-name>
+    <servlet-class>world_death_rate.web.servlet.WorldDeathRateServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldDeathRateServletCreate</servlet-name>
+    <url-pattern>/WorldDeathRateServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
     <display-name>UserServletRegister</display-name>
     <servlet-name>UserServletRegister</servlet-name>
     <servlet-class>user.web.servlet.UserServletRegister</servlet-class>

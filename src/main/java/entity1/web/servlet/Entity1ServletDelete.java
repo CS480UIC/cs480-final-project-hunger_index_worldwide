@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
+import entity1.dao.WorldDeathRateDao;
+import entity1.domain.WorldDeathRate;
 //import entity1.service.Entity1Exception;
 //import entity1.service.Entity1Service;
 /**
@@ -45,13 +45,13 @@ public class Entity1ServletDelete extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String method = request.getParameter("method");
-		Entity1Dao entity1dao = new Entity1Dao();
-		Entity1 entity1 = null;
+		WorldDeathRateDao entity1dao = new WorldDeathRateDao();
+		WorldDeathRate entity1 = null;
 		if(method.equals("search"))
 		{
 			try {
 //				entity1dao to Entity1Dao
-				entity1 = Entity1Dao.findByUsername(request.getParameter("username"));
+				entity1 = WorldDeathRateDao.findByUsername(request.getParameter("username"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {

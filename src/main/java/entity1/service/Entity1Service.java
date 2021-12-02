@@ -1,8 +1,8 @@
 package entity1.service;
 
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.Entity1;
+import entity1.dao.WorldDeathRateDao;
+import entity1.domain.WorldDeathRate;
 
 /**
  * logic functions such as register, login
@@ -10,7 +10,7 @@ import entity1.domain.Entity1;
  *
  */
 public class Entity1Service {
-	private Entity1Dao entity1Dao = new Entity1Dao();
+	private WorldDeathRateDao entity1Dao = new WorldDeathRateDao();
 	
 	/**
 	 * register a Entity1
@@ -19,10 +19,10 @@ public class Entity1Service {
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
-	public void create(Entity1 form) throws Entity1Exception, ClassNotFoundException, InstantiationException, IllegalAccessException{
+	public void create(WorldDeathRate form) throws Entity1Exception, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		
 		// check the primary key of Entity1
-		Entity1 entity1 = Entity1Dao.findByUsername(form.getUsername());
+		WorldDeathRate entity1 = WorldDeathRateDao.findByUsername(form.getUsername());
 		if(entity1.getUsername()!=null && entity1.getUsername().equals(form.getUsername())) throw new Entity1Exception("This user name has been registered!");
 		entity1Dao.add(form);
 	}
@@ -35,8 +35,8 @@ public class Entity1Service {
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
-	public void login(Entity1 form) throws Entity1Exception, ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Entity1 user = Entity1Dao.findByUsername(form.getUsername());
+	public void login(WorldDeathRate form) throws Entity1Exception, ClassNotFoundException, InstantiationException, IllegalAccessException {
+		WorldDeathRate user = WorldDeathRateDao.findByUsername(form.getUsername());
 		if(user.getUsername()==null) throw new Entity1Exception("The user is not in the database");
 		
 		String password = user.getPassword();

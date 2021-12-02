@@ -22,9 +22,15 @@
   
   <body>
   <h1>World Body Fat Percentage Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	New Entry    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/WorldBodyFatPercentageServletCreate'/>" method="post">
+	body_fat_percentage    :<input type="text" name="Body fat percentage" value="${form.body_fat_percentage }"/>
+	<span style="color: red; font-weight: 900">${errors.body_fat_percentage }</span> <br />
+	
+	country    :<input type="text" name="Country" value="${form.country }"/>
+	<span style="color: red; font-weight: 900">${errors.country }</span> <br />
+	
+	continent    :<input type="text" name="Continent" value="${form.continent }"/>
+	<span style="color: red; font-weight: 900">${errors.continent }</span> <br />
 	
 	<input type="submit" value="Create New Entry"/>
 </form>

@@ -22,9 +22,15 @@
   
   <body>
   <h1>World Death Rate Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	New Entry    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/WorldDeathRateServletCreate'/>" method="post">
+	death_rate    :<input type="text" name="Death Rate" value="${form.death_rate }"/>
+	<span style="color: red; font-weight: 900">${errors.death_rate }</span> <br />
+	
+	country    :<input type="text" name="Country" value="${form.country }"/>
+	<span style="color: red; font-weight: 900">${errors.country }</span> <br />
+	
+	continent    :<input type="text" name="Continent" value="${form.continent }"/>
+	<span style="color: red; font-weight: 900">${errors.continent }</span> <br />
 	
 	<input type="submit" value="Create New Entry"/>
 </form>

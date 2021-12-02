@@ -12,15 +12,15 @@ import java.sql.SQLException;
 //import java.util.ArrayList;
 //import java.util.List;
 
-import entity1.domain.Entity1;
+import entity1.domain.WorldDeathRate;
 
 /**
  * DDL functions performed in database
  */
-public class Entity1Dao {
+public class WorldDeathRateDao {
 
-	public static Entity1 findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		Entity1 entity1 = new Entity1();
+	public static WorldDeathRate findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		WorldDeathRate entity1 = new WorldDeathRate();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore","test", "12345678");
@@ -52,7 +52,7 @@ public class Entity1Dao {
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(WorldDeathRate form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("We are here");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -71,7 +71,7 @@ public class Entity1Dao {
 	}
 	
 	
-	public void update(Entity1 form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(WorldDeathRate form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("Now going to update");
 		System.out.println(form);
 

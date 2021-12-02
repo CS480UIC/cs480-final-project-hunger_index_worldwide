@@ -1,4 +1,4 @@
-package entity1.web.servlet;
+package world_death_rate.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,22 +11,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.domain.WorldDeathRate;
-import entity1.service.Entity1Exception;
-import entity1.service.Entity1Service;
+import world_death_rate.domain.WorldDeathRate;
+import world_death_rate.service.WorldDeathRateException;
+import world_death_rate.service.WorldDeathRateService;
 
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletCreate extends HttpServlet {
+public class WorldDeathRateServletCreate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Entity1ServletCreate() {
+    public WorldDeathRateServletCreate() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -42,7 +42,7 @@ public class Entity1ServletCreate extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Entity1Service entity1service = new Entity1Service();
+		WorldDeathRateService entity1service = new WorldDeathRateService();
 		Map<String,String[]> paramMap = request.getParameterMap();
 		WorldDeathRate form = new WorldDeathRate();
 		List<String> info = new ArrayList<String>();
@@ -58,13 +58,13 @@ public class Entity1ServletCreate extends HttpServlet {
 //		System.out.println("1");
 //		System.out.println(info);
 
-		form.setUsername(info.get(1));
+		form.setDeath_rate(Float.parseFloat(info.get(1)));
 //		System.out.println("1");
 
-		form.setPassword(info.get(2));
+		form.setCountry(info.get(2));
 //		System.out.println("2");
 
-		form.setEmail(info.get(3));		
+		form.setContinent(info.get(3));		
 //		System.out.println("3");
 		
 		
@@ -73,7 +73,7 @@ public class Entity1ServletCreate extends HttpServlet {
 			entity1service.create(form);
 			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 			
-		} catch (ClassNotFoundException | Entity1Exception e) {
+		} catch (ClassNotFoundException | WorldDeathRateException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InstantiationException e) {
