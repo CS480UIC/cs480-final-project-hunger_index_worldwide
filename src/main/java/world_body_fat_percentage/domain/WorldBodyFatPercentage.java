@@ -3,7 +3,7 @@ package world_body_fat_percentage.domain;
 /**
  * world_body_fat_percentage object
  * 
- * @author Aayush Makharia
+ * @author 
  * 
  */
 public class WorldBodyFatPercentage {

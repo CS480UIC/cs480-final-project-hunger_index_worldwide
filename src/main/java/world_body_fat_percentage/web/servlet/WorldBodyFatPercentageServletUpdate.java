@@ -88,9 +88,6 @@ public class WorldBodyFatPercentageServletUpdate extends HttpServlet {
 			form.setBody_fat_percentage(Float.parseFloat(info.get(1)));
 			form.setCountry(info.get(2));
 			form.setContinent(info.get(3));
-			System.out.println(form.getBody_fat_percentage());
-			System.out.println(form.getCountry());
-			System.out.println(form.getContinent());
 
 			try {
 				entity1dao.update(form);
