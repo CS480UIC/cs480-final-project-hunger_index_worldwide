@@ -1,18 +1,18 @@
 package world_happiness_index.service;
 
-public class WorldIncomeIndexException extends Exception {
+public class WorldHappinessIndexException extends Exception {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public WorldIncomeIndexException() {
+	public WorldHappinessIndexException() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public WorldIncomeIndexException(String message) {
+	public WorldHappinessIndexException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}

@@ -7,19 +7,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-import world_happiness_index.domain.WorldIncomeIndex;
+import world_happiness_index.domain.WorldHappinessIndex;
 
 /**
  * DDL functions performed in database
  */
-public class WorldIncomeIndexDao {
+public class WorldHappinessIndexDao {
 
-	public static WorldIncomeIndex findByCountry(String countryName) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		WorldIncomeIndex entity1 = new WorldIncomeIndex();
+	public static WorldHappinessIndex findByCountry(String countryName) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		WorldHappinessIndex entity1 = new WorldHappinessIndex();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
-		    String sql = "select * from world_income_index where country = ?";
+		    String sql = "select * from world_happiness_index where country = ?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,countryName);
 		    ResultSet resultSet = preparestatement.executeQuery();
@@ -29,7 +29,7 @@ public class WorldIncomeIndexDao {
 		    	if(country.equals(countryName)){
 		    		entity1.setContinent(resultSet.getString("continent"));
 		    		entity1.setCountry(country);
-		    		entity1.setAvg_income(Integer.parseInt(resultSet.getString("avg_income")));
+		    		entity1.setHappiness_index(Float.parseFloat(resultSet.getString("happiness_index")));
 		    	}
 		    }
 		    connect.close();
@@ -47,15 +47,15 @@ public class WorldIncomeIndexDao {
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(WorldIncomeIndex form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(WorldHappinessIndex form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("We are here");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
 			
-			String sql = "insert into world_income_index(avg_income, country, continent) values(?,?,?)";
+			String sql = "insert into world_happiness_index(happiness_index, country, continent) values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql);
-		    preparestatement.setInt(1,form.getAvg_income());
+		    preparestatement.setFloat(1,form.getHappiness_index());
 		    preparestatement.setString(2,form.getCountry());
 		    preparestatement.setString(3,form.getContinent());
 		    preparestatement.executeUpdate();
