@@ -83,8 +83,8 @@ public class WorldDeathRateDao {
 			System.out.println("Update Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setFloat(1,form.getDeath_rate());
-			preparestatement.setString(3,form.getContinent());
-		    preparestatement.setString(2,form.getCountry());
+			preparestatement.setString(2,form.getContinent());
+		    preparestatement.setString(3,form.getCountry());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

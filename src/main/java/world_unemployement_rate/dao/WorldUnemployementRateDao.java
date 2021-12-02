@@ -84,8 +84,8 @@ public class WorldUnemployementRateDao {
 			System.out.println("Update Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setFloat(1,form.getUnemployment_rate());
-			preparestatement.setString(3,form.getContinent());
-		    preparestatement.setString(2,form.getContinent());
+			preparestatement.setString(2,form.getContinent());
+		    preparestatement.setString(3,form.getContinent());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

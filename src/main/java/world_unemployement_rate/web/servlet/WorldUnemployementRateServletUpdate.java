@@ -87,7 +87,7 @@ public class WorldUnemployementRateServletUpdate extends HttpServlet {
 			}
 			form.setUnemployment_rate(Float.parseFloat(info.get(1)));
 			form.setContinent(info.get(3));
-			form.setCountry(request.getParameter("country"));
+			form.setCountry(info.get(2));
 
 			try {
 				entity1dao.update(form);
@@ -100,7 +100,7 @@ public class WorldUnemployementRateServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher(request.getContextPath() + "/jsps/main.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
 		}
 	}
 }

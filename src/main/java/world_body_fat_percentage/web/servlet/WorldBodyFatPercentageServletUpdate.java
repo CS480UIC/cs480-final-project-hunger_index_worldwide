@@ -86,8 +86,11 @@ public class WorldBodyFatPercentageServletUpdate extends HttpServlet {
 				System.out.println(name + ": " + Arrays.toString(values));
 			}
 			form.setBody_fat_percentage(Float.parseFloat(info.get(1)));
+			form.setCountry(info.get(2));
 			form.setContinent(info.get(3));
-			form.setCountry(request.getParameter("country"));
+			System.out.println(form.getBody_fat_percentage());
+			System.out.println(form.getCountry());
+			System.out.println(form.getContinent());
 
 			try {
 				entity1dao.update(form);
@@ -100,7 +103,7 @@ public class WorldBodyFatPercentageServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher(request.getContextPath() + "/jsps/main.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
 		}
 	}
 }

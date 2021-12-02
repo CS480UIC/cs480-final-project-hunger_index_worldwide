@@ -64,7 +64,7 @@ public class WorldDeathRateServletCreate extends HttpServlet {
 		form.setCountry(info.get(2));
 //		System.out.println("2");
 
-		form.setContinent(info.get(3));		
+		form.setContinent(info.get(4));		
 //		System.out.println("3");
 		
 		

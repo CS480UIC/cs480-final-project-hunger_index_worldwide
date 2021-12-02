@@ -64,8 +64,7 @@ public class WorldBodyFatPercentageServletCreate extends HttpServlet {
 		form.setCountry(info.get(2));
 //		System.out.println("2");
 
-		form.setContinent(info.get(3));		
-//		System.out.println("3");
+		form.setContinent(info.get(4));		
 		
 		
 		try {
