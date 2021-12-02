@@ -22,10 +22,13 @@
   
   <body>
   <h1>world_vaccination_info Create</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	New Entry    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
+<form action="<c:url value='/WorldVaccinationInfoServletCreate'/>" method="post">
+	Vaccination rate    :<input type="text" name="Vaccination rate"  value="${form.vaccination_rate }"/>
+	<span style="color: red; font-weight: 900">${errors.vaccination_rate }</span> <br />
+	Country   :<input type="text" name="Country" value="${form.country }"/>
+	<span style="color: red; font-weight: 900">${errors.country }</span> <br />
+	Continent    :<input type="text" name="Continent" value="${form.continent }"/>
+	<span style="color: red; font-weight: 900">${errors.continent }</span> <br />
 	
 	<input type="submit" value="Create New entry"/>
 </form>
