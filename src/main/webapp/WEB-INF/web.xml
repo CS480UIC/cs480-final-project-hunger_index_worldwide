@@ -12,7 +12,16 @@
     <servlet-name>Entity1ServletCreate</servlet-name>
     <url-pattern>/Entity1ServletCreate</url-pattern>
   </servlet-mapping>
-  
+  <servlet>
+    <description></description>
+    <display-name>InitializeDB</display-name>
+    <servlet-name>InitializeDB</servlet-name>
+    <servlet-class>init.web.servlet.InitializeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitializeDB</servlet-name>
+    <url-pattern>/InitializeDB</url-pattern>
+  </servlet-mapping>
   <servlet>
     <description></description>
     <display-name>WorldHappinessIndexServletCreate</display-name>
