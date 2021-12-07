@@ -22,7 +22,7 @@
   
   <body>
   <h1>Update</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/WorldIncomeIndexServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Update Entry   :<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>

@@ -7,15 +7,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-import world_vaccination_info.domain.WorldDeathRate;
+import world_vaccination_info.domain.WorldVaccinationInfo;
 
 /**
  * DDL functions performed in database
  */
 public class WorldVaccinationInfoDao {
 
-	public static WorldDeathRate findByCountry(String countryName) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		WorldDeathRate entity1 = new WorldDeathRate();
+	public static WorldVaccinationInfo findByCountry(String countryName) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		WorldVaccinationInfo entity1 = new WorldVaccinationInfo();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
@@ -47,7 +47,7 @@ public class WorldVaccinationInfoDao {
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(WorldDeathRate form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(WorldVaccinationInfo form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("We are here");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -66,7 +66,7 @@ public class WorldVaccinationInfoDao {
 	}
 	
 	
-/*	public void update(WorldVaccinationInfo form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(WorldVaccinationInfo form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("Now going to update");
 		System.out.println(form);
 
@@ -74,12 +74,12 @@ public class WorldVaccinationInfoDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE world_vaccination_info SET vaccination_rate = ?, continent = ? where country = ?;";
 			System.out.println("Update Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+			preparestatement.setFloat(1,form.getVaccination_rate());
+		    preparestatement.setString(2,form.getCountry());
+		    preparestatement.setString(3,form.getContinent());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -87,23 +87,26 @@ public class WorldVaccinationInfoDao {
 		}
 	}
 	
+
 	
-	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	
+	public void delete(String cnty) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("Now going to delete");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
 			
-			String sql = "delete from entity1 where username = ?";
-			System.out.println(username);
+			String sql = "delete from world_vaccination_info where country = ?";
+			System.out.println(cnty);
 			System.out.println("Delete Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setString(1,cnty);
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
 	}
-	*/
+	
+	
 }

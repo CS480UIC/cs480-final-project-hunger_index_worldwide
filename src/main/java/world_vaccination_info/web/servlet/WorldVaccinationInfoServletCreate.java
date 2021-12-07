@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import world_vaccination_info.domain.WorldDeathRate;
+import world_vaccination_info.domain.WorldVaccinationInfo;
 import world_vaccination_info.service.WorldVaccinationInfoException;
 import world_vaccination_info.service.WorldVaccinationInfoService;
 
@@ -44,7 +44,7 @@ public class WorldVaccinationInfoServletCreate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		WorldVaccinationInfoService entity1service = new WorldVaccinationInfoService();
 		Map<String,String[]> paramMap = request.getParameterMap();
-		WorldDeathRate form = new WorldDeathRate();
+		WorldVaccinationInfo form = new WorldVaccinationInfo();
 		List<String> info = new ArrayList<String>();
 		System.out.println(form);
 		for(String name : paramMap.keySet()) {
