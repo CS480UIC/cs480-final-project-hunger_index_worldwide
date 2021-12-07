@@ -66,7 +66,7 @@ public class WorldHappinessIndexDao {
 	}
 	
 	
-/*	public void update(WorldVaccinationInfo form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void update(WorldHappinessIndex form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("Now going to update");
 		System.out.println(form);
 
@@ -74,12 +74,12 @@ public class WorldHappinessIndexDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE world_happiness_index SET vaccination_info = ?, continent = ? where country = ?;";
 			System.out.println("Update Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+			preparestatement.setFloat(1,form.getHappiness_index());
+		    preparestatement.setString(2,form.getCountry());
+		    preparestatement.setString(3,form.getContinent());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -88,22 +88,23 @@ public class WorldHappinessIndexDao {
 	}
 	
 	
-	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	
+	public void delete(String cnty) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("Now going to delete");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
 			
-			String sql = "delete from entity1 where username = ?";
-			System.out.println(username);
+			String sql = "delete from world_happiness_index where username = ?";
+			System.out.println(cnty);
 			System.out.println("Delete Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+			preparestatement.setString(1,cnty);
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
 	}
-	*/
+	
 }

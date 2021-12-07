@@ -33,6 +33,39 @@
     <url-pattern>/WorldHappinessIndexServletCreate</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>WorldHappinessIndexServletRead</display-name>
+    <servlet-name>WorldHappinessIndexServletRead</servlet-name>
+    <servlet-class>world_happiness_index.web.servlet.WorldHappinessIndexServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldHappinessIndexServletRead</servlet-name>
+    <url-pattern>/WorldHappinessIndexServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WorldHappinessIndexServletUpdate</display-name>
+    <servlet-name>WorldHappinessIndexServletUpdate</servlet-name>
+    <servlet-class>world_happiness_index.web.servlet.WorldHappinessIndexServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldHappinessIndexServletUpdate</servlet-name>
+    <url-pattern>/WorldHappinessIndexServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WorldHappinessIndexServletDelete</display-name>
+    <servlet-name>WorldHappinessIndexServletDelete</servlet-name>
+    <servlet-class>world_happiness_index.web.servlet.WorldHappinessIndexServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldHappinessIndexServletDelete</servlet-name>
+    <url-pattern>/WorldHappinessIndexServletDelete</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>WorldIncomeIndexServletCreate</display-name>
@@ -42,6 +75,39 @@
   <servlet-mapping>
     <servlet-name>WorldIncomeIndexServletCreate</servlet-name>
     <url-pattern>/WorldIncomeIndexServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WorldIncomeIndexServletRead</display-name>
+    <servlet-name>WorldIncomeIndexServletRead</servlet-name>
+    <servlet-class>world_income_index.web.servlet.WorldIncomeIndexServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldIncomeIndexServletRead</servlet-name>
+    <url-pattern>/WorldIncomeIndexServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>WorldIncomeIndexServletUpdate</display-name>
+    <servlet-name>WorldIncomeIndexServletUpdate</servlet-name>
+    <servlet-class>world_income_index.web.servlet.WorldIncomeIndexServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldIncomeIndexServletUpdate</servlet-name>
+    <url-pattern>/WorldIncomeIndexServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>WorldIncomeIndexServletDelete</display-name>
+    <servlet-name>WorldIncomeIndexServletDelete</servlet-name>
+    <servlet-class>world_income_index.web.servlet.WorldIncomeIndexServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldIncomeIndexServletDelete</servlet-name>
+    <url-pattern>/WorldIncomeIndexServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -89,6 +155,39 @@
   <servlet-mapping>
     <servlet-name>WorldVaccinationInfoServletCreate</servlet-name>
     <url-pattern>/WorldVaccinationInfoServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WorldVaccinationInfoServletRead</display-name>
+    <servlet-name>WorldVaccinationInfoServletRead</servlet-name>
+    <servlet-class>world_vaccination_info.web.servlet.WorldVaccinationInfoServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldVaccinationInfoServletRead</servlet-name>
+    <url-pattern>/WorldVaccinationInfoServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WorldVaccinationInfoServletUpdate</display-name>
+    <servlet-name>WorldVaccinationInfoServletUpdate</servlet-name>
+    <servlet-class>world_vaccination_info.web.servlet.WorldVaccinationInfoServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldVaccinationInfoServletUpdate</servlet-name>
+    <url-pattern>/WorldVaccinationInfoServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WorldVaccinationInfoServletDelete</display-name>
+    <servlet-name>WorldVaccinationInfoServletDelete</servlet-name>
+    <servlet-class>world_vaccination_info.web.servlet.WorldVaccinationInfoServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldVaccinationInfoServletDelete</servlet-name>
+    <url-pattern>/WorldVaccinationInfoServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>

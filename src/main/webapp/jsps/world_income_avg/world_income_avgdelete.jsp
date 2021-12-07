@@ -22,7 +22,7 @@
   
   <body>
   <h1>Delete world_income_avg</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/WorldIncomeIndexServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
 	Delete Entry   :<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>

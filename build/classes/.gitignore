@@ -1,9 +1,7 @@
-/world_body_fat_percentage/
-<<<<<<< HEAD
-/world_unemployement_rate/
-=======
+/world_vaccination_info/
 /world_happiness_index/
 /world_income_index/
+<<<<<<< HEAD
 >>>>>>> branch 'main' of https://github.com/CS480UIC/cs480-final-project-hunger_index_worldwide.git
 /user/
 =======
@@ -13,3 +11,7 @@
 /world_death_rate/
 /world_unemployment_rate/
 /init/
+=======
+>>>>>>> branch 'main' of https://github.com/CS480UIC/cs480-final-project-hunger_index_worldwide.git
+/world_body_fat_percentage/
+/world_unemployement_rate/

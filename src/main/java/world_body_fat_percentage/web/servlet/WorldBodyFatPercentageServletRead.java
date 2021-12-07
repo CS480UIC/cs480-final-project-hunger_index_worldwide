@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import world_body_fat_percentage.dao.WorldBodyFatPercentageDao;
 import world_body_fat_percentage.domain.WorldBodyFatPercentage;
 //import entity1.service.Entity1Service;
-import world_vaccination_info.dao.WorldVaccinationInfoDao;
-import world_vaccination_info.domain.WorldDeathRate;
 
 
 /**

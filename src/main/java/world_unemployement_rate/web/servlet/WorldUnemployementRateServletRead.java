@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import world_unemployement_rate.dao.WorldUnemployementRateDao;
 import world_unemployement_rate.domain.WorldUnemployementRate;
 //import entity1.service.Entity1Service;
-import world_vaccination_info.dao.WorldVaccinationInfoDao;
-import world_vaccination_info.domain.WorldDeathRate;
 
 
 /**

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import world_vaccination_info.dao.WorldVaccinationInfoDao;
-import world_vaccination_info.domain.WorldDeathRate;
+import world_vaccination_info.domain.WorldVaccinationInfo;
 //import entity1.service.Entity1Service;
 
 
@@ -39,7 +39,7 @@ public class WorldVaccinationInfoServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		WorldDeathRate entity1 = null;
+		WorldVaccinationInfo entity1 = null;
 		try {
 			entity1 = WorldVaccinationInfoDao.findByCountry(request.getParameter("country"));
 		} catch (ClassNotFoundException e1) {
