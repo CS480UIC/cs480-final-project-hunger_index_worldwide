@@ -22,9 +22,9 @@
   
   <body>
   <h1>World Unemployement Rate Delete</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete :<input type="text" name="username" value="${form.username }"/>
+<form action="<c:url value='/WorldUnemployementRateServletDelete'/>" method="post">
+	<input type="hidden" name="method" value="delete"/>
+	Delete :<input type="text" name="country" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
 	<input type="submit" value="Delete Entry"/>

@@ -64,13 +64,15 @@ public class WorldUnemployementRateServletUpdate extends HttpServlet {
 
 						System.out.println(entity1);
 						request.setAttribute("world_unemployement_rate", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+						response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
+//						request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
 					
 				}
 				else{
 					
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
+//				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -86,8 +88,9 @@ public class WorldUnemployementRateServletUpdate extends HttpServlet {
 				System.out.println(name + ": " + Arrays.toString(values));
 			}
 			form.setUnemployment_rate(Float.parseFloat(info.get(1)));
-			form.setContinent(info.get(3));
+			
 			form.setCountry(info.get(2));
+			form.setContinent(info.get(3));
 
 			try {
 				entity1dao.update(form);
@@ -100,7 +103,8 @@ public class WorldUnemployementRateServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
+//			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
 		}
 	}
 }

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import world_vaccination_info.dao.WorldVaccinationInfoDao;
-import world_vaccination_info.domain.WorldVaccinationInfo;
+import world_vaccination_info.domain.WorldDeathRate;
 //import entity1.service.Entity1Service;
 
 /**

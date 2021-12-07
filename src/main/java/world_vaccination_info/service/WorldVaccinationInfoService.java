@@ -2,7 +2,7 @@ package world_vaccination_info.service;
 
 
 import world_vaccination_info.dao.WorldVaccinationInfoDao;
-import world_vaccination_info.domain.WorldVaccinationInfo;
+import world_vaccination_info.domain.WorldDeathRate;
 
 /**
  * logic functions such as register
@@ -19,10 +19,10 @@ public class WorldVaccinationInfoService {
 	 * @throws IllegalAccessException 
 	 * @throws InstantiationException 
 	 */
-	public void create(WorldVaccinationInfo form) throws WorldVaccinationInfoException, ClassNotFoundException, InstantiationException, IllegalAccessException{
+	public void create(WorldDeathRate form) throws WorldVaccinationInfoException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		
 		// check the primary key of Entity1
-		WorldVaccinationInfo entity1 = WorldVaccinationInfoDao.findByCountry(form.getCountry());
+		WorldDeathRate entity1 = WorldVaccinationInfoDao.findByCountry(form.getCountry());
 		if(entity1.getCountry()!=null && entity1.getCountry().equals(form.getCountry())) throw new WorldVaccinationInfoException("This country's vaccination rate has been registered!");
 		entity1Dao.add(form);
 	}

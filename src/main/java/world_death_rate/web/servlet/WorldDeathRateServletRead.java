@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import world_death_rate.dao.WorldDeathRateDao;
 import world_death_rate.domain.WorldDeathRate;
 //import entity1.service.Entity1Service;
+import world_death_rate.dao.WorldDeathRateDao;
+import world_death_rate.domain.WorldDeathRate;
 
 
 /**
@@ -39,27 +41,28 @@ public class WorldDeathRateServletRead extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		WorldDeathRate entity1 = null;
-//		try {
-//			entity1 = WorldDeathRateDao.findByUsername(request.getParameter("username"));
-//		} catch (ClassNotFoundException e1) {
-//			e1.printStackTrace();
-//		} catch (InstantiationException e1) {
-//			e1.printStackTrace();
-//		} catch (IllegalAccessException e1) {
-//			e1.printStackTrace();
-//		}
-//		
-//		if(entity1.getUsername()!=null){
-//					System.out.println(entity1);
+		WorldDeathRate entity1 = null;
+		try {
+			entity1 = WorldDeathRateDao.findByUsername(request.getParameter("country"));
+		} catch (ClassNotFoundException e1) {
+			e1.printStackTrace();
+		} catch (InstantiationException e1) {
+			e1.printStackTrace();
+		} catch (IllegalAccessException e1) {
+			e1.printStackTrace();
+		}
+		
+		if(entity1.getCountry()!=null){
+					System.out.println(entity1);
 //					request.setAttribute("entity1", entity1);
 //					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//				
-//			}
-//			else{
+				
+			}
+			else{
 //			request.setAttribute("msg", "Entity not found");
 //			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-//		}
+		}
+		response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 	}
 }
 

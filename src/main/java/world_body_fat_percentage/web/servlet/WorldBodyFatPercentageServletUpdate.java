@@ -64,13 +64,15 @@ public class WorldBodyFatPercentageServletUpdate extends HttpServlet {
 
 						System.out.println(entity1);
 						request.setAttribute("world_body_fat_percentage", entity1);
-						request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+						response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
+//						request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
 					
 				}
 				else{
 					
 				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
+//				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -100,7 +102,8 @@ public class WorldBodyFatPercentageServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
+//			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
 		}
 	}
 }

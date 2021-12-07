@@ -7,15 +7,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-import world_vaccination_info.domain.WorldVaccinationInfo;
+import world_vaccination_info.domain.WorldDeathRate;
 
 /**
  * DDL functions performed in database
  */
 public class WorldVaccinationInfoDao {
 
-	public static WorldVaccinationInfo findByCountry(String countryName) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		WorldVaccinationInfo entity1 = new WorldVaccinationInfo();
+	public static WorldDeathRate findByCountry(String countryName) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		WorldDeathRate entity1 = new WorldDeathRate();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
@@ -47,7 +47,7 @@ public class WorldVaccinationInfoDao {
 	 * @throws InstantiationException 
 	 */
 	
-	public void add(WorldVaccinationInfo form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void add(WorldDeathRate form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		System.out.println("We are here");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");

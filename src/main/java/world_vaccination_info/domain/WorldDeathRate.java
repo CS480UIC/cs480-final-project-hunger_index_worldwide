@@ -6,7 +6,7 @@ package world_vaccination_info.domain;
  * @author Akash Sunda
  * 
  */
-public class WorldVaccinationInfo {
+public class WorldDeathRate {
 	/*
 	 * Correspond to the user table
 	 */

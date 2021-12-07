@@ -24,7 +24,7 @@ public class WorldUnemployementRateDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
-		    String sql = "select * from world_unemployement_rate where country=?";
+		    String sql = "select * from world_unemployment_rate where country=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,cntry);
 		    ResultSet resultSet = preparestatement.executeQuery();
@@ -58,7 +58,7 @@ public class WorldUnemployementRateDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
 			
-			String sql = "insert into world_unemployement_rate values(?,?,?)";
+			String sql = "insert into world_unemployment_rate values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setFloat(1,form.getUnemployment_rate()
 		    		);
@@ -80,12 +80,12 @@ public class WorldUnemployementRateDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
 			
-			String sql = "UPDATE world_unemployement_rate SET unemployment_rate = ?, continent = ? where country = ?;";
+			String sql = "UPDATE world_unemployment_rate SET unemplyment_rate = ?, continent = ? where country = ?;";
 			System.out.println("Update Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setFloat(1,form.getUnemployment_rate());
 			preparestatement.setString(2,form.getContinent());
-		    preparestatement.setString(3,form.getContinent());
+			preparestatement.setString(3,form.getCountry());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -94,21 +94,21 @@ public class WorldUnemployementRateDao {
 	}
 //	
 //	
-//	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-//		System.out.println("Now going to delete");
-//		try {
-//			Class.forName("com.mysql.cj.jdbc.Driver");
-//			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore","test", "12345678");
-//			
-//			String sql = "delete from entity1 where username = ?";
-//			System.out.println(username);
-//			System.out.println("Delete Executed");
-//			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-//		    preparestatement.setString(1,username);
-//		    preparestatement.executeUpdate();
-//		    connect.close();
-//		} catch(SQLException e) {
-//			throw new RuntimeException(e);
-//		}
-//	}
+	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		System.out.println("Now going to delete");
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			
+			String sql = "delete from world_unemployment_rate where country = ?";
+			System.out.println(username);
+			System.out.println("Delete Executed");
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+		    preparestatement.setString(1,username);
+		    preparestatement.executeUpdate();
+		    connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
 }

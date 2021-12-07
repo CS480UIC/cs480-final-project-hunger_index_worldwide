@@ -116,6 +116,16 @@
     <url-pattern>/WorldBodyFatPercentageServletDelete</url-pattern>
   </servlet-mapping>
   
+   <servlet>
+    <description></description>
+    <display-name>WorldBodyFatPercentageServletRead</display-name>
+    <servlet-name>WorldBodyFatPercentageServletRead</servlet-name>
+    <servlet-class>world_body_fat_percentage.web.servlet.WorldBodyFatPercentageServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldBodyFatPercentageServletRead</servlet-name>
+    <url-pattern>/WorldBodyFatPercentageServletRead</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <description></description>
@@ -137,6 +147,17 @@
   <servlet-mapping>
     <servlet-name>WorldDeathRateServletUpdate</servlet-name>
     <url-pattern>/WorldDeathRateServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>WorldDeathRateServletRead</display-name>
+    <servlet-name>WorldDeathRateServletRead</servlet-name>
+    <servlet-class>world_death_rate.web.servlet.WorldDeathRateServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldDeathRateServletRead</servlet-name>
+    <url-pattern>/WorldDeathRateServletRead</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -171,6 +192,28 @@
   <servlet-mapping>
     <servlet-name>WorldUnemployementRateServletUpdate</servlet-name>
     <url-pattern>/WorldUnemployementRateServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>WorldUnemployementRateServletRead</display-name>
+    <servlet-name>WorldUnemployementRateServletRead</servlet-name>
+    <servlet-class>world_unemployement_rate.web.servlet.WorldUnemployementRateServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldUnemployementRateServletRead</servlet-name>
+    <url-pattern>/WorldUnemployementRateServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>WorldUnemployementRateServletDelete</display-name>
+    <servlet-name>WorldUnemployementRateServletDelete</servlet-name>
+    <servlet-class>world_unemployement_rate.web.servlet.WorldUnemployementRateServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldUnemployementRateServletDelete</servlet-name>
+    <url-pattern>/WorldUnemployementRateServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>
