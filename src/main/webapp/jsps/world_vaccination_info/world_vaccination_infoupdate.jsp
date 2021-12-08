@@ -23,11 +23,17 @@
   <body>
   <h1>Update World Vaccination Info</h1>
 <form action="<c:url value='/WorldVaccinationInfoServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Country   :<input type="text" name="country" value="${form.country }"/>
-	<span style="color: red; font-weight: 900">${errors.country }</span>
-	<br/>
-	<input type="submit" value="Update Country"/>
+<input type="hidden" name="method" value="update"/>
+	Vaccination Rate    :<input type="text" name="Vaccination Rate" value="${form.vaccination_rate }"/>
+	<span style="color: red; font-weight: 900">${errors.vaccination_rate }</span> <br />
+	
+	Country    :<input type="text" name="Country" value="${form.country }"/>
+	<span style="color: red; font-weight: 900">${errors.country }</span> <br />
+	
+	Continent    :<input type="text" name="Continent" value="${form.continent }"/>
+	<span style="color: red; font-weight: 900">${errors.continent }</span> <br />
+	
+	<input type="submit" value="Update Entry"/>
 </form>
   </body>
 </html>

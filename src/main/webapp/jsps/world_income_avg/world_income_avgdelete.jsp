@@ -23,8 +23,8 @@
   <body>
   <h1>Delete World Income Average</h1>
 <form action="<c:url value='/WorldIncomeIndexServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Delete Country   :<input type="text" name="Delete Country" value="${form.country }"/>
+	<input type="hidden" name="method" value="delete"/>
+	Delete Entry   :<input type="text" name="country" value="${form.country }"/>
 	<span style="color: red; font-weight: 900">${errors.country }</span>
 	<br/>
 	<input type="submit" value="Delete Entry"/>

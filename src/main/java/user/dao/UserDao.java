@@ -26,7 +26,7 @@ public class UserDao {
 	/**
 	 * password of your username to connect to the database
 	 */
-	private String MySQL_password = "0@Afnxn_wxm";  //TODO change password
+	private String MySQL_password = "Loading@123";  //TODO change password
 	
 	public User findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		User user = new User();

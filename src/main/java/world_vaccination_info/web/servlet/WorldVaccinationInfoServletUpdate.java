@@ -65,7 +65,7 @@ public class WorldVaccinationInfoServletUpdate extends HttpServlet {
 				System.out.println("11");
 
 						System.out.println(entity1);
-						request.setAttribute("world_death_rate", entity1);
+						request.setAttribute("world_vaccination_info", entity1);
 						response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 						//request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
 					

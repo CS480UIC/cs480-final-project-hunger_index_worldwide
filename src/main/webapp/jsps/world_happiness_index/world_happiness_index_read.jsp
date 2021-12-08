@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity1</title>
+    <title>Read World Happiness Index</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -25,7 +25,7 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/WorldHappinessIndexServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Country    :<input type="text" name="Country" value="${form.country }"/>
+	Country    :<input type="text" name="country" value="${form.country }"/>
 	<span style="color: red; font-weight: 900">${errors.country }</span>
 	
 	<input type="submit" value="Read"/>

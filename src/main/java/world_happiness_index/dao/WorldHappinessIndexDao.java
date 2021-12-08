@@ -74,12 +74,12 @@ public class WorldHappinessIndexDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
 			
-			String sql = "UPDATE world_happiness_index SET vaccination_info = ?, continent = ? where country = ?;";
+			String sql = "UPDATE world_happiness_index SET happiness_index = ?, continent = ? where country = ?;";
 			System.out.println("Update Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			preparestatement.setFloat(1,form.getHappiness_index());
-		    preparestatement.setString(2,form.getCountry());
-		    preparestatement.setString(3,form.getContinent());
+			preparestatement.setString(2,form.getContinent());
+		    preparestatement.setString(3,form.getCountry());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -95,7 +95,7 @@ public class WorldHappinessIndexDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
 			
-			String sql = "delete from world_happiness_index where username = ?";
+			String sql = "delete from world_happiness_index where country = ?";
 			System.out.println(cnty);
 			System.out.println("Delete Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 

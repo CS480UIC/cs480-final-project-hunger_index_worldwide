@@ -65,7 +65,7 @@ public class WorldIncomeIndexServletUpdate extends HttpServlet {
 				System.out.println("11");
 
 						System.out.println(entity1);
-						request.setAttribute("world_income_index", entity1);
+						request.setAttribute("country", entity1);
 						response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 						//request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
 					
@@ -91,7 +91,7 @@ public class WorldIncomeIndexServletUpdate extends HttpServlet {
 			form.setAvg_income(Integer.parseInt(info.get(1)));
 			form.setCountry(info.get(2));
 			form.setContinent(info.get(3));
-			
+			System.out.println("smd");
 
 			try {
 				entity1dao.update(form);

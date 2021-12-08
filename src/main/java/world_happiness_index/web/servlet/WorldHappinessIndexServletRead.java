@@ -54,7 +54,7 @@ public class WorldHappinessIndexServletRead extends HttpServlet {
 					System.out.println(entity1);
 //					request.setAttribute("entity1", entity1);
 //					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
-					request.setAttribute("Country", entity1);
+					request.setAttribute("country", entity1);
 					request.getRequestDispatcher("/jsps/world_happiness_index/world_happiness_index_read_output.jsp").forward(request, response);
 				
 			}

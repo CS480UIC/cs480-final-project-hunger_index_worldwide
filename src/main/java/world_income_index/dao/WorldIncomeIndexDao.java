@@ -91,8 +91,8 @@ public class WorldIncomeIndexDao {
 			System.out.println("Update Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			preparestatement.setInt(1,form.getAvg_income());
-		    preparestatement.setString(2,form.getCountry());
-		    preparestatement.setString(3,form.getContinent());
+			preparestatement.setString(2,form.getContinent());
+		    preparestatement.setString(3,form.getCountry());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -107,7 +107,7 @@ public class WorldIncomeIndexDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
 			
-			String sql = "delete from world_income_index where username = ?";
+			String sql = "delete from world_income_index where country = ?";
 			System.out.println(cnty);
 			System.out.println("Delete Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -118,6 +118,7 @@ public class WorldIncomeIndexDao {
 			throw new RuntimeException(e);
 		}
 	}
+	
 	
 //	public List<Object> findRecipientIncome() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
 //		List<Object> list = new ArrayList<>();

@@ -23,11 +23,17 @@
   <body>
   <h1>Update World Happiness Index</h1>
 <form action="<c:url value='/WorldHappinessIndexServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Country   :<input type="text" name="country" value="${form.country }"/>
-	<span style="color: red; font-weight: 900">${errors.country }</span>
-	<br/>
-	<input type="submit" value="Update Country"/>
+	<input type="hidden" name="method" value="update"/>
+	Happiness Index    :<input type="text" name="Happiness Index" value="${form.happiness_index }"/>
+	<span style="color: red; font-weight: 900">${errors.happiness_index }</span> <br />
+	
+	Country    :<input type="text" name="Country" value="${form.country }"/>
+	<span style="color: red; font-weight: 900">${errors.country }</span> <br />
+	
+	Continent    :<input type="text" name="Continent" value="${form.continent }"/>
+	<span style="color: red; font-weight: 900">${errors.continent }</span> <br />
+	
+	<input type="submit" value="Update Entry"/>
 </form>
   </body>
 </html>

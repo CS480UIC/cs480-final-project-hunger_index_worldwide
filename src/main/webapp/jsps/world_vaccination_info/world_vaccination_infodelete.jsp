@@ -23,8 +23,8 @@
   <body>
   <h1>Delete World Vaccination Info</h1>
 <form action="<c:url value='/WorldVaccinationInfoServletDelete'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Country   :<input type="text" name="username" value="${form.username }"/>
+	<input type="hidden" name="method" value="delete"/>
+	Country   :<input type="text" name="country" value="${form.country }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
 	<input type="submit" value="Delete Country"/>
