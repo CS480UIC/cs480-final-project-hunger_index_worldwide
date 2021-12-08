@@ -316,6 +316,18 @@
   </servlet-mapping>
   
   
+  <servlet>
+    <description></description>
+    <display-name>WorldDeathRateC3</display-name>
+    <servlet-name>WorldDeathRateC3</servlet-name>
+    <servlet-class>world_death_rate.web.servlet.WorldDeathRateC3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldDeathRateC3</servlet-name>
+    <url-pattern>/WorldDeathRateC3</url-pattern>
+  </servlet-mapping>
+  
+  
   
   <servlet>
     <description></description>

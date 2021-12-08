@@ -140,4 +140,38 @@ public class WorldDeathRateDao {
 		return list;
 		
 	}
+	public List<Object> findCCD() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			String sql = "select country, continent, death_rate "
+					+ "from world_death_rate "
+					+ "where exists "
+					+ "(select body_fat_percentage "
+					+ "from world_body_fat_percentage "
+					+ "where world_body_fat_percentage.country = world_death_rate.country and "
+					+ "body_fat_percentage > 5.00);";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				
+				WorldDeathRate bf = new WorldDeathRate();
+//				WorldBodyFatPercentage fb=new WorldBodyFatPercentage();
+//				fb.setBody_fat_percentage(resultSet.getFloat("body_fat_percentage"));
+				System.out.println(resultSet.getString("country"));
+				bf.setDeath_rate(resultSet.getFloat("death_rate"));
+				bf.setCountry(resultSet.getString("country"));
+				bf.setContinent(resultSet.getString("continent"));
+				
+
+	    		list.add(bf);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
 }

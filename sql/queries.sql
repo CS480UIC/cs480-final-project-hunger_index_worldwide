@@ -35,4 +35,4 @@ where exists
 (select body_fat_percentage 
 from world_body_fat_percentage
 where world_body_fat_percentage.country = world_death_rate.country and
-body_fat_percentage > 5.00)
+body_fat_percentage > 5.00);

@@ -23,13 +23,13 @@ import world_death_rate.service.WorldDeathRateService;
  * Servlet implementation class UserServlet
  */
 
-public class WorldDeathRateQ2 extends HttpServlet {
+public class WorldDeathRateC3 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public WorldDeathRateQ2() {
+    public WorldDeathRateC3() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -49,9 +49,9 @@ public class WorldDeathRateQ2 extends HttpServlet {
 //		WorldBodyFatPercentageDao entity1dao = new WorldBodyFatPercentageDao();
 //		WorldBodyFatPercentage entity1 = null;
 		WorldDeathRateService fb= new WorldDeathRateService();
-		System.out.println("im not in correct");
+		System.out.println("im in correct");
 		try {
-				request.setAttribute("CCList", fb.findCC());
+				request.setAttribute("CCList", fb.findCCD());
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -59,7 +59,7 @@ public class WorldDeathRateQ2 extends HttpServlet {
 		} catch (IllegalAccessException e1) {
 			e1.printStackTrace();
 		}
-		request.getRequestDispatcher("/jsps/Queryresult/q2.jsp").forward(request, response);
+		request.getRequestDispatcher("/jsps/Queryresult/c3.jsp").forward(request, response);
 		
 	}
 }

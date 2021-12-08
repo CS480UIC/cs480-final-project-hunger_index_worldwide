@@ -32,6 +32,10 @@ public class WorldDeathRateService {
 		return entity1Dao.findCC();
 		
 	}
+	public List<Object> findCCD() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return entity1Dao.findCCD();
+		
+	}
 //	/**
 //	 * Login function
 //	 * @param form
