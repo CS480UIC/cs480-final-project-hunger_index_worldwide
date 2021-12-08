@@ -1,6 +1,8 @@
 package world_body_fat_percentage.service;
 
 
+import java.util.List;
+
 import world_body_fat_percentage.dao.WorldBodyFatPercentageDao;
 import world_body_fat_percentage.domain.WorldBodyFatPercentage;
 
@@ -27,5 +29,8 @@ public class WorldBodyFatPercentageService {
 		WbfpDao.add(form);
 	}
 	
-	
+	public List<Object> findCC() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return WbfpDao.findCC();
+		
+	}
 }
