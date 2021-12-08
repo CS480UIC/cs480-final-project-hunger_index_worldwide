@@ -17,8 +17,8 @@ order by country;
 
 # N Complex Queries
 
-select DTH.death_rate AS death_rates, VC.vaccination_rate AS vaccination_rates, DTH.country
-from world_death_rate DTH 
+select DTH.happiness_index AS happiness_rates, VC.vaccination_rate AS vaccination_rates, DTH.country
+from world_happiness_index DTH 
 INNER JOIN world_vaccination_rate VC
 ON DTH.country = VC.country
 order by DTH.country;
