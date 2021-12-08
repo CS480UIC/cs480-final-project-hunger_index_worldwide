@@ -5,7 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+import java.util.ArrayList;
+import java.util.List;
 
 import world_happiness_index.domain.WorldHappinessIndex;
 
@@ -105,6 +106,31 @@ public class WorldHappinessIndexDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public static List<Object> findc3() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide", "root", "Loading@123");
+			String sql = "SELECT country, continent "
+						 + "FROM world_happiness_index "
+						 + "WHERE happiness_index > 7.00"
+						 + "ORDER BY country;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				WorldHappinessIndex Q3 = new WorldHappinessIndex();
+				
+				Q3.setCountry(resultSet.getString("country"));
+				Q3.setContinent(resultSet.getString("continent"));
+	    		list.add(Q3);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
 	}
 	
 }

@@ -68,6 +68,17 @@
   
   <servlet>
     <description></description>
+    <display-name>WorldHappinessIndexQ3</display-name>
+    <servlet-name>WorldHappinessIndexQ3</servlet-name>
+    <servlet-class>world_happiness_index.web.servlet.WorldHappinessIndexQ3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldHappinessIndexQ3</servlet-name>
+    <url-pattern>/WorldHappinessIndexQ3</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
     <display-name>WorldIncomeIndexServletCreate</display-name>
     <servlet-name>WorldIncomeIndexServletCreate</servlet-name>
     <servlet-class>world_income_index.web.servlet.WorldIncomeIndexServletCreate</servlet-class>
