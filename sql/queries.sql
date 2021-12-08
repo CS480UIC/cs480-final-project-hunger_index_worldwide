@@ -23,5 +23,10 @@ INNER JOIN world_vaccination_rate VC
 ON DTH.country = VC.country
 order by DTH.country;
 
-
+select country, continent, body_fat_percentage
+from world_body_fat_percentage
+where body_fat_percentage > (
+                            select avg(body_fat_percentage)
+                            from world_body_fat_percentage);
+                           
 
