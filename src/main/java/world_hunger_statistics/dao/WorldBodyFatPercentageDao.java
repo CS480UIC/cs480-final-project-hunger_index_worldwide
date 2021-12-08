@@ -18,7 +18,7 @@ import world_body_fat_percentage.domain.WorldBodyFatPercentage;
  * DDL functions performed in database
  */
 public class WorldBodyFatPercentageDao {
-
+// updated variables
 	public static WorldBodyFatPercentage findBybody_fat_percentage(String bfp) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		WorldBodyFatPercentage body_f_p = new WorldBodyFatPercentage();
 		try {
