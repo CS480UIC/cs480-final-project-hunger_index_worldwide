@@ -11,7 +11,8 @@ vaccination_rate FLOAT NOT NULL,
 death_rate FLOAT NOT NULL,
 happiness_index FLOAT NOT NULL,
 unemplyment_rate FLOAT NOT NULL,
-body_fate_percentage FLOAT NOT NULL
+body_fate_percentage FLOAT NOT NULL,
+date_added Date
 );
 
 
@@ -43,13 +44,6 @@ continent VARCHAR(30) NOT NULL
 );
 
 
-/*
-drop table if exists login_user;
- create table login_user(
-  user_id INT primary key,
-  `user_name` VARCHAR(50)
-  );
-  */
 
 drop table if exists world_income_index;
 
