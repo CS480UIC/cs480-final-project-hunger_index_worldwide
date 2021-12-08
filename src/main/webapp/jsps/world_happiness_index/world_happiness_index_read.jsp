@@ -25,10 +25,10 @@
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/WorldHappinessIndexServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Read Entry    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Country    :<input type="text" name="Country" value="${form.country }"/>
+	<span style="color: red; font-weight: 900">${errors.country }</span>
 	
-	<input type="submit" value="Read Entry"/>
+	<input type="submit" value="Read"/>
 </form>
   </body>
 </html>

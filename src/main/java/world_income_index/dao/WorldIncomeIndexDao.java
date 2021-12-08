@@ -5,14 +5,27 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+import java.util.ArrayList;
+import java.util.List;
 
 import world_income_index.domain.WorldIncomeIndex;
 
 /**
  * DDL functions performed in database
  */
+
+
 public class WorldIncomeIndexDao {
+	
+	/**
+	 * user name to connect to the database 
+	 */
+	private String MySQL_user = "root";  //TODO change user
+	
+	/**
+	 * password of your username to connect to the database
+	 */
+	private String MySQL_password = "Loading@123";  //TODO change password
 
 	public static WorldIncomeIndex findByCountry(String countryName) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		WorldIncomeIndex entity1 = new WorldIncomeIndex();
@@ -105,5 +118,27 @@ public class WorldIncomeIndexDao {
 			throw new RuntimeException(e);
 		}
 	}
+	
+//	public List<Object> findRecipientIncome() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+//		List<Object> list = new ArrayList<>();
+//		try {
+//			Class.forName("com.mysql.cj.jdbc.Driver");
+//			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide", MySQL_user, MySQL_password);
+//			String sql = "select * from world_income_index where country = ?";
+//			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+//			ResultSet resultSet = preparestatement.executeQuery();			
+//			while(resultSet.next()){
+//				WorldIncomeIndex entity1 = new WorldIncomeIndex();
+//				entity1.setTotal_net(resultSet.getInt("total_net"));
+//	    		
+//	    		list.add(entity1);
+//			 }
+//			connect.close();
+//		} catch(SQLException e) {
+//			throw new RuntimeException(e);
+//		}
+//		return list;
+//		
+//	}
 	
 }

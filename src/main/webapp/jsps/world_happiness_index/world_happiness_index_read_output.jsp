@@ -5,9 +5,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <base href="">
     
-    <title>body</title>
+    <title>World Happiness Index Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,12 +21,17 @@
   </head>
   
   <body>
-    <h1>CRUD world_income_avg </h1>
-    <br>
-	<a href="<c:url value='/jsps/world_income_avg/world_income_avgcreate.jsp'/>" target="_parent">Create</a> |&nbsp; 
-	<a href="<c:url value='/jsps/world_income_avg/world_income_avgread.jsp'/>" target="_parent">Read</a> |&nbsp;
-	<a href="<c:url value='/jsps/world_income_avg/world_income_avgupdate.jsp'/>" target="_parent">Update</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/world_income_avg/world_income_avgdelete.jsp'/>" target="_parent">Delete</a>	
-	    
-  </body>
+  <h1>World Happiness Index Output</h1>
+<p style="color: red; font-weight: 900">${msg }</p>
+<form>
+	Happiness Index    :<input type="text" name="happiness_index" value="${country.happiness_index }" disabled/>
+	<br/>
+	Country ：<input type="text" name="country" value="${country.country }" disabled/>
+	<br/>
+	Continent	：<input type="text" name="continent" value="${country.continent }" disabled/>
+	<br/>
+</form>
+
+<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
+</body>
 </html>

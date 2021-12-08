@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity1</title>
+    <title>Delete World Vaccination Info</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,13 +21,13 @@
   </head>
   
   <body>
-  <h1>Delete world_vaccination_info</h1>
+  <h1>Delete World Vaccination Info</h1>
 <form action="<c:url value='/WorldVaccinationInfoServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Entry   :<input type="text" name="username" value="${form.username }"/>
+	Country   :<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	<input type="submit" value="Delete Entry"/>
+	<input type="submit" value="Delete Country"/>
 </form>
   </body>
 </html>

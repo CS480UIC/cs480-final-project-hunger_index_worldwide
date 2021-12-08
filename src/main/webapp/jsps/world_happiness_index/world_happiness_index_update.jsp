@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Update Entity1</title>
+    <title>Update World Happiness Index</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -24,10 +24,10 @@
   <h1>Update World Happiness Index</h1>
 <form action="<c:url value='/WorldHappinessIndexServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update Entry   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Country   :<input type="text" name="country" value="${form.country }"/>
+	<span style="color: red; font-weight: 900">${errors.country }</span>
 	<br/>
-	<input type="submit" value="Update Entry"/>
+	<input type="submit" value="Update Country"/>
 </form>
   </body>
 </html>

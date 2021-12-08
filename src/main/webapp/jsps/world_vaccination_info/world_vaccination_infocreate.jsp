@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Entity1 Create</title>
+    <title>World Vaccination Info Create</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>world_vaccination_info Create</h1>
+  <h1>World Vaccination Info Create</h1>
 <form action="<c:url value='/WorldVaccinationInfoServletCreate'/>" method="post">
 	Vaccination rate    :<input type="text" name="Vaccination rate"  value="${form.vaccination_rate }"/>
 	<span style="color: red; font-weight: 900">${errors.vaccination_rate }</span> <br />

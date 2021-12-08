@@ -1,17 +1,9 @@
-/world_vaccination_info/
+/entity1/
+/init/
+/user/
+/world_body_fat_percentage/
+/world_death_rate/
 /world_happiness_index/
 /world_income_index/
-<<<<<<< HEAD
->>>>>>> branch 'main' of https://github.com/CS480UIC/cs480-final-project-hunger_index_worldwide.git
-/user/
-=======
-/login_user/
->>>>>>> branch 'main' of https://github.com/CS480UIC/cs480-final-project-hunger_index_worldwide.git
-/world_vaccination_info/
-/world_death_rate/
-/world_unemployment_rate/
-/init/
-=======
->>>>>>> branch 'main' of https://github.com/CS480UIC/cs480-final-project-hunger_index_worldwide.git
-/world_body_fat_percentage/
 /world_unemployement_rate/
+/world_vaccination_info/

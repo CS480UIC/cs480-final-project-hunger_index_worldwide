@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Entity1 Create</title>
+    <title>Create World Happiness Index</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>World Happiness Index Create</h1>
+  <h1>Create World Happiness Index</h1>
 <form action="<c:url value='/WorldHappinessIndexServletCreate'/>" method="post">
 	Happiness Index  :<input type="text" name="Happiness Index"  value="${form.happiness_index }"/>
 	<span style="color: red; font-weight: 900">${errors.happiness_index }</span> <br />
@@ -30,7 +30,7 @@
 	Continent    :<input type="text" name="Continent" value="${form.continent }"/>
 	<span style="color: red; font-weight: 900">${errors.continent }</span> <br />
 	
-	<input type="submit" value="Create Entry"/>
+	<input type="submit" value="Create New Entry"/>
 </form>
   </body>
 </html>

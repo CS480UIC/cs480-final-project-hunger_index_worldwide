@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity1</title>
+    <title>Read World Vaccination Info</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,12 +21,12 @@
   </head>
   
   <body>
-  <h1>Read world_vaccination_info</h1>
+  <h1>Read World Vaccination Info</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form action="<c:url value='/WorldVaccinationInfoServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Entry    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Country    :<input type="text" name="country" value="${form.country }"/>
+	<span style="color: red; font-weight: 900">${errors.country }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>

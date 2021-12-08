@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity1</title>
+    <title>Delete World Happiness Index</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -24,10 +24,10 @@
   <h1>Delete World Happiness Index</h1>
 <form action="<c:url value='/WorldHappinessIndexServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Entry   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	Country   :<input type="text" name="country" value="${form.country }"/>
+	<span style="color: red; font-weight: 900">${errors.country }</span>
 	<br/>
-	<input type="submit" value="Delete Entry"/>
+	<input type="submit" value="Delete Country"/>
 </form>
   </body>
 </html>

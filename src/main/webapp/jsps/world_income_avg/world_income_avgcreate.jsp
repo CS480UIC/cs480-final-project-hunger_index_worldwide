@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Entity1 Create</title>
+    <title>Create World Income Average</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,7 +21,7 @@
   </head>
   
   <body>
-  <h1>world_income_avg Create</h1>
+  <h1>World Income Average Create</h1>
 <form action="<c:url value='/WorldIncomeIndexServletCreate'/>" method="post">
 	Average Income  :<input type="text" name="Average Income"  value="${form.avg_income }"/>
 	<span style="color: red; font-weight: 900">${errors.avg_income }</span> <br />

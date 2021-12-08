@@ -54,13 +54,17 @@ public class WorldVaccinationInfoServletRead extends HttpServlet {
 					System.out.println(entity1);
 //					request.setAttribute("entity1", entity1);
 //					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+					request.setAttribute("Country", entity1);
+					request.getRequestDispatcher("/jsps/world_vaccination_info/world_vaccination_inforead_output.jsp").forward(request, response);
 				
 			}
 			else{
 //			request.setAttribute("msg", "Entity not found");
 //			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "Country not found");
+				request.getRequestDispatcher("/jsps/world_vaccination_info/world_vaccination_inforead_output.jsp").forward(request, response);
 		}
-		response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
+		//response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 	}
 }
 
