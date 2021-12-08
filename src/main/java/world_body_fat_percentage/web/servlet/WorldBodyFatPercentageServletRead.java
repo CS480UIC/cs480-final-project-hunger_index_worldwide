@@ -52,15 +52,15 @@ public class WorldBodyFatPercentageServletRead extends HttpServlet {
 		
 		if(entity1.getCountry()!=null){
 					System.out.println(entity1);
-//					request.setAttribute("entity1", entity1);
-//					request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+					request.setAttribute("entity1", entity1);
+					request.getRequestDispatcher("/jsps/world_body_fat_percentage/world_body_fat_percentage_read_output.jsp").forward(request, response);
 				
 			}
 			else{
-//			request.setAttribute("msg", "Entity not found");
-//			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "Entity not found");
+			request.getRequestDispatcher("/jsps/world_body_fat_percentage/world_body_fat_percentage_read_output.jsp").forward(request, response);
 		}
-		response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
+//		response.sendRedirect( request.getContextPath() + "/jsps/main.jsp");
 	}
 }
 

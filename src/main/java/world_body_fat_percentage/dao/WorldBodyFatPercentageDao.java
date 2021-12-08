@@ -24,7 +24,7 @@ public class WorldBodyFatPercentageDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
-		    String sql = "select * from world_body_fat_percentage where body_fat_percentage=?";
+		    String sql = "select * from world_body_fat_percentage where country=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,bfp);
 		    ResultSet resultSet = preparestatement.executeQuery();

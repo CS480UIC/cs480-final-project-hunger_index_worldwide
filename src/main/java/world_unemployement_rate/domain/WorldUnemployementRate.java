@@ -10,7 +10,8 @@ public class WorldUnemployementRate {
 	/*
 	 * Correspond to the user table
 	 */
-	
+	private String country; 
+	private String continent;
 	private Float unemployment_rate;
 	/**
 	 * @return the unemployment_rate
@@ -48,8 +49,7 @@ public class WorldUnemployementRate {
 	public void setContinent(String continent) {
 		this.continent = continent;
 	}
-	private String country; 
-	private String continent;
+
 	
 	
 }

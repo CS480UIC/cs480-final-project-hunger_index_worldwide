@@ -80,7 +80,7 @@ public class WorldUnemployementRateDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
 			
-			String sql = "UPDATE world_unemployment_rate SET unemplyment_rate = ?, continent = ? where country = ?;";
+			String sql = "UPDATE world_unemployment_rate SET unemployment_rate = ?, continent = ? where country = ?;";
 			System.out.println("Update Executed");
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setFloat(1,form.getUnemployment_rate());

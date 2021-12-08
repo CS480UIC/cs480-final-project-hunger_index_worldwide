@@ -62,7 +62,7 @@ continent VARCHAR(30) NOT NULL
 drop table if exists world_unemployment_rate;
 
 create table world_unemployment_rate(
-unemplyment_rate FLOAT PRIMARY KEY,
+unemployment_rate FLOAT PRIMARY KEY,
 country VARCHAR(30) NOT NULL,
 continent VARCHAR(30) NOT NULL
 );

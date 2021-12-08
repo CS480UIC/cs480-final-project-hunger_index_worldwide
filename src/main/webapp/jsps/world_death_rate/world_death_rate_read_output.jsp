@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity1</title>
+    <title>Read Entity Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,15 +21,17 @@
   </head>
   
   <body>
-  <h1>World Unemployment Rate Read</h1>
+  <h1>Read World Death Rate Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/WorldUnemployementRateServletRead'/>" method="post">
-	<input type="hidden" name="method" value="regist"/>
-	Read   :<input type="text" name="country" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form>
+	Death Rate    :<input type="text" name="death_rate" value="${entity1.death_rate }" disabled/>
 	<br/>
-
-	<input type="submit" value="Read Entity"/>
+	Country：<input type="text" name="country" value="${entity1.country }" disabled/>
+	<br/>
+	Continent	：<input type="text" name="continent" value="${entity1.continent }" disabled/>
+	<br/>
 </form>
-  </body>
+
+<button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
+</body>
 </html>
