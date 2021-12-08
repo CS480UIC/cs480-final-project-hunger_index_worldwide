@@ -116,7 +116,7 @@ public class WorldVaccinationInfoDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide", "root", "Loading@123");
-			String sql = "select DTH.happiness_index AS happiness_index, VC.vaccination_rate AS vaccination_rates, DTH.country "
+			String sql = "select DTH.happiness_index AS happiness_index, DTH.country "
 						 + "from world_happiness_index DTH "
 						 + "INNER JOIN world_vaccination_info VC "
 						 + "ON DTH.country = VC.country "
