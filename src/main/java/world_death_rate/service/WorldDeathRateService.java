@@ -1,6 +1,8 @@
 package world_death_rate.service;
 
 
+import java.util.List;
+
 import world_death_rate.dao.WorldDeathRateDao;
 import world_death_rate.domain.WorldDeathRate;
 
@@ -25,6 +27,10 @@ public class WorldDeathRateService {
 		WorldDeathRate entity1 = WorldDeathRateDao.findByUsername(form.getCountry());
 		if(entity1.getCountry()!=null && entity1.getCountry().equals(form.getCountry())) throw new WorldDeathRateException("This user name has been registered!");
 		entity1Dao.add(form);
+	}
+	public List<Object> findCC() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return entity1Dao.findCC();
+		
 	}
 //	/**
 //	 * Login function

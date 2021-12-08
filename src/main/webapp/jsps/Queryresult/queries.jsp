@@ -26,10 +26,10 @@
     <br>
     <a href="<c:url value='/WorldBodyFatPercentageQ1'/>" target="body">Q1-: List Countries and Continents with Body Fat Percentage more than 5.0</a>&nbsp;&nbsp;
     <br>
-    <a href="<c:url value='/WorldHappinessIndexQ3'/>" target="body">Q3-: List Countries and Continents with Happiness Index more than 7.0</a>&nbsp;&nbsp;
+    <a href="<c:url value='/WorldDeathRateQ2'/>" target="body">Q2-: List Countries and Continents with Death Rate more than 12.0</a>&nbsp;&nbsp;
     <br>
- 	<%-- <a href="<c:url value='/findJobs'/>" target="body">Q1-: List Countries and Continents with Death Rate more than 12.0</a>&nbsp;&nbsp;
+    <a href="<c:url value='/WorldHappinessIndexQ3'/>" target="body">Q3-: List Countries and Continents with Happiness Index more than 7.0</a>&nbsp;&nbsp;
+ 	
  	<br>
- 	<a href="<c:url value='/findJobs'/>" target="body">Q1-: List Countries and Continents with Happiness Index more than 7.0</a>&nbsp;&nbsp; --%>
   </body>
 </html>

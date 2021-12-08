@@ -304,6 +304,19 @@
   </servlet-mapping>
   
   
+   <servlet>
+    <description></description>
+    <display-name>WorldDeathRateQ2</display-name>
+    <servlet-name>WorldDeathRateQ2</servlet-name>
+    <servlet-class>world_death_rate.web.servlet.WorldDeathRateQ2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldDeathRateQ2</servlet-name>
+    <url-pattern>/WorldDeathRateQ2</url-pattern>
+  </servlet-mapping>
+  
+  
+  
   <servlet>
     <description></description>
     <display-name>WorldUnemployementRateServletCreate</display-name>
