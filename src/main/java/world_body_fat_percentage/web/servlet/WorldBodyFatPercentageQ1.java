@@ -50,7 +50,7 @@ public class WorldBodyFatPercentageQ1 extends HttpServlet {
 //		WorldBodyFatPercentage entity1 = null;
 		WorldBodyFatPercentageService fb= new WorldBodyFatPercentageService();
 		try {
-				request.setAttribute("JobList", fb.findCC());
+				request.setAttribute("CCList", fb.findCC());
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		} catch (InstantiationException e1) {
@@ -58,7 +58,7 @@ public class WorldBodyFatPercentageQ1 extends HttpServlet {
 		} catch (IllegalAccessException e1) {
 			e1.printStackTrace();
 		}
-		request.getRequestDispatcher("/jsps/user/q1.jsp").forward(request, response);
+		request.getRequestDispatcher("/jsps/Queryresult/q1.jsp").forward(request, response);
 		
 	}
 }

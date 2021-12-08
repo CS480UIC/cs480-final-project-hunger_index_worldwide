@@ -235,6 +235,19 @@
     <url-pattern>/WorldBodyFatPercentageServletRead</url-pattern>
   </servlet-mapping>
   
+  
+   <servlet>
+    <description></description>
+    <display-name>WorldBodyFatPercentageQ1</display-name>
+    <servlet-name>WorldBodyFatPercentageQ1</servlet-name>
+    <servlet-class>world_body_fat_percentage.web.servlet.WorldBodyFatPercentageQ1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldBodyFatPercentageQ1</servlet-name>
+    <url-pattern>/WorldBodyFatPercentageQ1</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <description></description>
     <display-name>WorldDeathRateServletCreate</display-name>
@@ -357,6 +370,8 @@
     <url-pattern>/UserServletLogout</url-pattern>
   </servlet-mapping>
   
+  
+ 
   
   <servlet>
     <description></description>

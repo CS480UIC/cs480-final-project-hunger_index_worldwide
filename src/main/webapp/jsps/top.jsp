@@ -43,7 +43,7 @@
 		</c:when>
 		<c:otherwise>
 			Hello：${sessionScope.session_user.username };
-			<a href="<c:url value='/jsps/item.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
+			<a href="<c:url value='/jsps/Queryresult/queries.jsp'/>" target="body">Query Result</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/UserServletLogout'/>" target="_parent">Logout</a> |&nbsp; 
 			<a href="<c:url value='/jsps/world_body_fat_percentage/menu.jsp'/>" target="body">World Body Fat Percentage</a> |&nbsp;&nbsp;
 			<a href="<c:url value='/jsps/world_death_rate/menu.jsp'/>" target="body">World Death Rate</a> |&nbsp;&nbsp;
