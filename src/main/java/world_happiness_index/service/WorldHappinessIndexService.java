@@ -30,9 +30,11 @@ public class WorldHappinessIndexService {
 	}
 
 	public List<Object> findc3() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
-		
 			return WorldHappinessIndexDao.findc3();
-		
+	}
+	
+	public List<Object> findcq1() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return WorldHappinessIndexDao.findcq1();
 	}
 
 }

@@ -5,8 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-
+import world_happiness_index.domain.WorldHappinessIndex;
 import world_vaccination_info.domain.WorldVaccinationInfo;
 
 /**
@@ -106,6 +108,32 @@ public class WorldVaccinationInfoDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+	
+	
+	public static List<Object> findcq1() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide", "root", "Loading@123");
+			String sql = "select DTH.happiness_index AS happiness_index, VC.vaccination_rate AS vaccination_rates, DTH.country "
+						 + "from world_happiness_index DTH "
+						 + "INNER JOIN world_vaccination_info VC "
+						 + "ON DTH.country = VC.country "
+						 + "order by DTH.country;";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				WorldVaccinationInfo bf = new WorldVaccinationInfo();
+				bf.setVaccination_rate(resultSet.getFloat("vaccination_rate"));
+				bf.setCountry(resultSet.getString("country"));
+	    		list.add(bf);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
 	}
 	
 	

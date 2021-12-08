@@ -340,6 +340,27 @@
   </servlet-mapping>
   
   
+   <servlet>
+    <description></description>
+    <display-name>WorldHappinessIndexC1</display-name>
+    <servlet-name>WorldHappinessIndexC1</servlet-name>
+    <servlet-class>world_happiness_index.web.servlet.WorldHappinessIndexC1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldHappinessIndexC1</servlet-name>
+    <url-pattern>/WorldHappinessIndexC1</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>WorldVaccinationInfoC1</display-name>
+    <servlet-name>WorldVaccinationInfoC1</servlet-name>
+    <servlet-class>world_vaccination_info.web.servlet.WorldVaccinationInfoC1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldVaccinationInfoC1</servlet-name>
+    <url-pattern>/WorldVaccinationInfoC1</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <description></description>

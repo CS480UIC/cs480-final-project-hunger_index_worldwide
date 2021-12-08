@@ -30,7 +30,9 @@
     <br>
     <a href="<c:url value='/WorldHappinessIndexQ3'/>" target="body">Q3-: List Countries and Continents with Happiness Index more than 7.0</a>&nbsp;&nbsp;
     <br>
-    <a href="<c:url value='/WorldBodyFatPercentageC2'/>" target="body">Complex Q3-: List Countries, Continents and Body Fat Percentage where the Body Fat Percentage is more than the average Body Fat Percentage of the table</a>&nbsp;&nbsp;
+    <a href="<c:url value='/WorldHappinessIndexC1'/>" target="body">Complex Q1-: List Countries and Happiness Index of countries whose Vaccination Info is provided.</a>&nbsp;&nbsp;
+    <br>
+    <a href="<c:url value='/WorldBodyFatPercentageC2'/>" target="body">Complex Q2-: List Countries, Continents and Body Fat Percentage where the Body Fat Percentage is more than the average Body Fat Percentage of the table</a>&nbsp;&nbsp;
     <br>
     <a href="<c:url value='/WorldDeathRateC3'/>" target="body">Complex Q3-: List Countries, Continents and Death Rate where the Body Fat Percentage is more than 5.0</a>&nbsp;&nbsp;
  	<br>
