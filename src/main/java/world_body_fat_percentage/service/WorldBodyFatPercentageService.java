@@ -33,4 +33,8 @@ public class WorldBodyFatPercentageService {
 		return WbfpDao.findCC();
 		
 	}
+	public List<Object> findCCB() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return WbfpDao.findCCB();
+		
+	}
 }

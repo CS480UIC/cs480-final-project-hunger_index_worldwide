@@ -259,6 +259,18 @@
   </servlet-mapping>
   
   
+   <servlet>
+    <description></description>
+    <display-name>WorldBodyFatPercentageC2</display-name>
+    <servlet-name>WorldBodyFatPercentageC2</servlet-name>
+    <servlet-class>world_body_fat_percentage.web.servlet.WorldBodyFatPercentageC2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WorldBodyFatPercentageC2</servlet-name>
+    <url-pattern>/WorldBodyFatPercentageC2</url-pattern>
+  </servlet-mapping>
+  
+  
   <servlet>
     <description></description>
     <display-name>WorldDeathRateServletCreate</display-name>

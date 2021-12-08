@@ -139,5 +139,34 @@ public class WorldBodyFatPercentageDao {
 		return list;
 		
 	}
+	public List<Object> findCCB() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			String sql = "select country, continent, body_fat_percentage "
+					+ "from world_body_fat_percentage "
+					+ "where body_fat_percentage > ("
+					+ "                            select avg(body_fat_percentage) "
+					+ "                            from world_body_fat_percentage);";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				
+				WorldBodyFatPercentage bf = new WorldBodyFatPercentage();
+				bf.setBody_fat_percentage(resultSet.getFloat("body_fat_percentage"));
+				bf.setCountry(resultSet.getString("country"));
+				bf.setContinent(resultSet.getString("continent"));
+				
+
+	    		list.add(bf);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
+	}
 
 }
