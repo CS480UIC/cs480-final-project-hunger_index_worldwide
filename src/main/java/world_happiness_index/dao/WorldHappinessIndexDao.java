@@ -17,12 +17,12 @@ public class WorldHappinessIndexDao {
 	/**
 	 * user name to connect to the database 
 	 */
-	private static String MySQL_user = "root";  //TODO change user
+	private static String MySQL_user = "hunger_world_statistics";  //TODO change user
 	
 	/**
 	 * password of your username to connect to the database
 	 */
-	private static String MySQL_password = "0@Afnxn_wxm";  //TODO change password
+	private static String MySQL_password = "hunger123";  //TODO change password
 	public static WorldHappinessIndex findByCountry(String countryName) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		WorldHappinessIndex entity1 = new WorldHappinessIndex();
 		try {

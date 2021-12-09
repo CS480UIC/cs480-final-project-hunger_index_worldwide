@@ -21,12 +21,12 @@ public class InitDao {
 	/**
 	 * user name to connect to the database 
 	 */
-//	private String MySQL_user = "welfare";  //TODO change user
+	private static String MySQL_user = "hunger_world_statistics";  //TODO change user
 	
 	/**
 	 * password of your username to connect to the database
 	 */
-//	private String MySQL_password = "pass123";  //TODO change password
+	private static String MySQL_password = "hunger123";  //TODO change password
 	
 	/**
 	 * get the Search result with Username 
@@ -36,7 +36,7 @@ public class InitDao {
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 		    String sql = "select * from user where username=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,username);
@@ -67,7 +67,7 @@ public class InitDao {
 	public void add(User user) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "insert into user values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -86,7 +86,7 @@ public class InitDao {
 		List<Object> list = new ArrayList<>();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			String sql = "select * from user";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			
@@ -108,7 +108,7 @@ public class InitDao {
 	public void initialize() throws ClassNotFoundException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide?allowMultiQueries=true","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide?allowMultiQueries=true",MySQL_user, MySQL_password);
 			String sql = "create database if not exists hunger_index_worldwide ; "
 					+ "use hunger_index_worldwide; "
 					+ "drop table if exists world_hunger_statistics; "

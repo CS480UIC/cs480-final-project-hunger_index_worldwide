@@ -21,12 +21,12 @@ public class WorldBodyFatPercentageDao {
 	/**
 	 * user name to connect to the database 
 	 */
-	private static String MySQL_user = "root";  //TODO change user
+	private static String MySQL_user = "hunger_world_statistics";  //TODO change user
 	
 	/**
 	 * password of your username to connect to the database
 	 */
-	private String MySQL_password = "0@Afnxn_wxm";  //TODO change password
+	private String MySQL_password = "hunger123";  //TODO change password
 // updated variables
 	public static WorldBodyFatPercentage findBybody_fat_percentage(String bfp) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		WorldBodyFatPercentage body_f_p = new WorldBodyFatPercentage();
