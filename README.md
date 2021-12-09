@@ -8,12 +8,7 @@ hunger_index_worldwide
 2. Akash Sunda
 3. Rohan Suresh
 # Description
-The basic idea of our project is to understand how the impact of COVID has effected the current starving population, weather it has improved or gotten worse.
-The data we want to store in our database includes 2 sets of data. Firstly the worldwide starvation statistics before the pandemic,  secondly the statistics after the pandemic. the structure of the data will include continent abbreviation, year, country names, randomly generated id numbers and the number of people who are starving. 
-Any web based software should be able to have access to the database. the database will also give people research opportunities if they are interested in the topic. 
-Most databases would use current data to calculate and estimate the future numbers, but what we would like to do is to be able to analyze in detail how the numbers have escalated over the years to give a more accurate prediction
-Most databases would use current data to calculate and estimate the future numbers, but what we would like to do is to be able to analyze in detail how the numbers have escalated over the years to give a more accurate prediction.
-UN challenge - End Hunger, achieve food security and improved nutrition and promote sustained agriculture
+The basic idea of our project is to understand how the impact of COVID has effected the current starving population, weather it has improved or gotten worse. Our Database will contain 7 entities world_hunger_statistics, world_body_fat_percentage, world_death_rate, world_unemployment_rate, world_income_avg, world_happiness_index, world_vaccination_info. The structure of the data will include continent, country names, their respective rates. Any web based software should be able to have access to the database. the database will also give people research opportunities if they are interested in the topic. Most databases would use current data to calculate and estimate the future numbers, but what we would like to do is to be able to analyze in detail how the numbers have escalated over the years to give a more accurate prediction. UN challenge - End Hunger, achieve food security and improved nutrition and promote sustained agriculture
 
 
 # CRUD Screenshots
