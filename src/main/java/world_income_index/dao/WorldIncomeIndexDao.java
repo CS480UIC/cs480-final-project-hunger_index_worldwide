@@ -20,18 +20,18 @@ public class WorldIncomeIndexDao {
 	/**
 	 * user name to connect to the database 
 	 */
-	private String MySQL_user = "root";  //TODO change user
+	private static String MySQL_user = "root";  //TODO change user
 	
 	/**
 	 * password of your username to connect to the database
 	 */
-	private String MySQL_password = "Loading@123";  //TODO change password
+	private static String MySQL_password = "0@Afnxn_wxm";  //TODO change password
 
 	public static WorldIncomeIndex findByCountry(String countryName) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		WorldIncomeIndex entity1 = new WorldIncomeIndex();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 		    String sql = "select * from world_income_index where country = ?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,countryName);
@@ -64,7 +64,7 @@ public class WorldIncomeIndexDao {
 		System.out.println("We are here");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "insert into world_income_index(avg_income, country, continent) values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql);
@@ -85,7 +85,7 @@ public class WorldIncomeIndexDao {
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "UPDATE world_income_index SET avg_income = ?, continent = ? where country = ?;";
 			System.out.println("Update Executed");
@@ -105,7 +105,7 @@ public class WorldIncomeIndexDao {
 		System.out.println("Now going to delete");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "delete from world_income_index where country = ?";
 			System.out.println(cnty);

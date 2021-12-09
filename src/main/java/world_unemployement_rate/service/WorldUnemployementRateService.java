@@ -6,7 +6,7 @@ import world_unemployement_rate.domain.WorldUnemployementRate;
 
 /**
  * logic functions such as register, login
- * @author Aayush Makharia
+ * @author Afnan Waseem
  *
  */
 public class WorldUnemployementRateService {

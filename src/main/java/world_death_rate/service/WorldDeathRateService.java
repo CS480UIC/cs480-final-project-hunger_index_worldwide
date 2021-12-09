@@ -8,7 +8,7 @@ import world_death_rate.domain.WorldDeathRate;
 
 /**
  * logic functions such as register, login
- * @author Aayush Makharia
+ * @author Afnan Waseem
  *
  */
 public class WorldDeathRateService {

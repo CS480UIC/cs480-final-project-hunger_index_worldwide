@@ -18,7 +18,7 @@ date_added Date
 
 drop table if exists world_body_fat_percentage;
 create table world_body_fat_percentage (
-body_fate_percentage FLOAT NOT NULL,
+body_fat_percentage FLOAT NOT NULL,
 country VARCHAR(30) PRIMARY KEY,
 continent VARCHAR(30) NOT NULL
 );
@@ -61,7 +61,7 @@ country VARCHAR(30) PRIMARY KEY,
 continent VARCHAR(30) NOT NULL
 );
 
-drop table if exists world_vaccination_rate;
+drop table if exists world_vaccination_info;
 
 create table world_vaccination_rate(
 vaccination_rate FLOAT NOT NULL UNIQUE,

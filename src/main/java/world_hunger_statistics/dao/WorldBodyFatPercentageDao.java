@@ -18,12 +18,21 @@ import world_body_fat_percentage.domain.WorldBodyFatPercentage;
  * DDL functions performed in database
  */
 public class WorldBodyFatPercentageDao {
+	/**
+	 * user name to connect to the database 
+	 */
+	private static String MySQL_user = "root";  //TODO change user
+	
+	/**
+	 * password of your username to connect to the database
+	 */
+	private String MySQL_password = "0@Afnxn_wxm";  //TODO change password
 // updated variables
 	public static WorldBodyFatPercentage findBybody_fat_percentage(String bfp) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		WorldBodyFatPercentage body_f_p = new WorldBodyFatPercentage();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 		    String sql = "select * from world_body_fat_percentage where country=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,bfp);
@@ -57,7 +66,7 @@ public class WorldBodyFatPercentageDao {
 		System.out.println("We are here");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "insert into world_body_fat_percentage values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -78,7 +87,7 @@ public class WorldBodyFatPercentageDao {
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "UPDATE world_body_fat_percentage SET body_fat_percentage = ?, continent = ? where country = ?;";
 			System.out.println("Update Executed");
@@ -98,7 +107,7 @@ public class WorldBodyFatPercentageDao {
 		System.out.println("Now going to delete");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "delete from world_body_fat_percentage where country = ?";
 			System.out.println(cnt);

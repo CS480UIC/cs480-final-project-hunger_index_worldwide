@@ -19,12 +19,20 @@ import world_death_rate.domain.WorldDeathRate;
  * DDL functions performed in database
  */
 public class WorldDeathRateDao {
-
+	/**
+	 * user name to connect to the database 
+	 */
+	private static String MySQL_user = "root";  //TODO change user
+	
+	/**
+	 * password of your username to connect to the database
+	 */
+	private static String MySQL_password = "0@Afnxn_wxm";  //TODO change password
 	public static WorldDeathRate findByUsername(String cntry) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		WorldDeathRate wdr = new WorldDeathRate();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 		    String sql = "select * from world_death_rate where country=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,cntry);
@@ -57,7 +65,7 @@ public class WorldDeathRateDao {
 		System.out.println("We are here");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "insert into world_death_rate values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -78,7 +86,7 @@ public class WorldDeathRateDao {
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "UPDATE world_death_rate SET death_rate = ?, continent = ? where country = ?;";
 			System.out.println("Update Executed");
@@ -98,7 +106,7 @@ public class WorldDeathRateDao {
 		System.out.println("Now going to delete");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "delete from world_death_rate where country = ?";
 			System.out.println(cnty);
@@ -116,7 +124,7 @@ public class WorldDeathRateDao {
 		List<Object> list = new ArrayList<>();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			String sql = "select country, continent "
 					+ "from world_death_rate "
 					+ "where death_rate > 12.00 "
@@ -144,7 +152,7 @@ public class WorldDeathRateDao {
 		List<Object> list = new ArrayList<>();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			String sql = "select country, continent, death_rate "
 					+ "from world_death_rate "
 					+ "where exists "

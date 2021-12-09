@@ -18,12 +18,20 @@ import world_unemployement_rate.domain.WorldUnemployementRate;
  * DDL functions performed in database
  */
 public class WorldUnemployementRateDao {
-
+	/**
+	 * user name to connect to the database 
+	 */
+	private static String MySQL_user = "root";  //TODO change user
+	
+	/**
+	 * password of your username to connect to the database
+	 */
+	private String MySQL_password = "0@Afnxn_wxm";  //TODO change password
 	public static WorldUnemployementRate findByUsername(String cntry) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		WorldUnemployementRate wdr = new WorldUnemployementRate();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, "0@Afnxn_wxm");
 		    String sql = "select * from world_unemployment_rate where country=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,cntry);
@@ -56,7 +64,7 @@ public class WorldUnemployementRateDao {
 		System.out.println("We are here");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "insert into world_unemployment_rate values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -78,7 +86,7 @@ public class WorldUnemployementRateDao {
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "UPDATE world_unemployment_rate SET unemployment_rate = ?, continent = ? where country = ?;";
 			System.out.println("Update Executed");
@@ -98,7 +106,7 @@ public class WorldUnemployementRateDao {
 		System.out.println("Now going to delete");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "0@Afnxn_wxm");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "delete from world_unemployment_rate where country = ?";
 			System.out.println(username);

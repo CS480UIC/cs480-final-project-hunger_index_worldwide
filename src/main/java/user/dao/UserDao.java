@@ -26,14 +26,14 @@ public class UserDao {
 	/**
 	 * password of your username to connect to the database
 	 */
-	private String MySQL_password = "Loading@123";  //TODO change password
+	private String MySQL_password = "0@Afnxn_wxm";  //TODO change password
 	
 	public User findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		User user = new User();
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 		    String sql = "select * from user where username=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,username);
@@ -65,7 +65,7 @@ public class UserDao {
 	public void add(User user) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "insert into user values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -84,7 +84,7 @@ public class UserDao {
 		List<Object> list = new ArrayList<>();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", MySQL_password);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			String sql = "select * from user";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 			ResultSet resultSet = preparestatement.executeQuery();			

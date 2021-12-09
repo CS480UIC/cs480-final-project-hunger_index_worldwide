@@ -15,12 +15,20 @@ import world_vaccination_info.domain.WorldVaccinationInfo;
  * DDL functions performed in database
  */
 public class WorldVaccinationInfoDao {
-
+	/**
+	 * user name to connect to the database 
+	 */
+	private static String MySQL_user = "root";  //TODO change user
+	
+	/**
+	 * password of your username to connect to the database
+	 */
+	private static String MySQL_password = "0@Afnxn_wxm";  //TODO change password
 	public static WorldVaccinationInfo findByCountry(String countryName) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		WorldVaccinationInfo entity1 = new WorldVaccinationInfo();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 		    String sql = "select * from world_vaccination_info where country = ?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,countryName);
@@ -53,7 +61,7 @@ public class WorldVaccinationInfoDao {
 		System.out.println("We are here");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "insert into world_vaccination_info(vaccination_rate, country, continent) values(?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql);
@@ -74,7 +82,7 @@ public class WorldVaccinationInfoDao {
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "UPDATE world_vaccination_info SET vaccination_rate = ?, continent = ? where country = ?;";
 			System.out.println("Update Executed");
@@ -96,7 +104,7 @@ public class WorldVaccinationInfoDao {
 		System.out.println("Now going to delete");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide","root", "Loading@123");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide",MySQL_user, MySQL_password);
 			
 			String sql = "delete from world_vaccination_info where country = ?";
 			System.out.println(cnty);
@@ -115,7 +123,7 @@ public class WorldVaccinationInfoDao {
 		List<Object> list = new ArrayList<>();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide", "root", "Loading@123");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hunger_index_worldwide", MySQL_user, MySQL_password);
 			String sql = "select DTH.happiness_index AS happiness_index, DTH.country "
 						 + "from world_happiness_index DTH "
 						 + "INNER JOIN world_vaccination_info VC "
